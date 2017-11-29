@@ -3,5 +3,5 @@
 Makeline::Makeline()
 {
     //ctor
-    cout << "Skoğa pantanir";
+    cout << "1. Skoğa pantanir" << endl;
 }
