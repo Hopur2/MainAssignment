@@ -12,6 +12,7 @@ class Menu
     protected:
 
     private:
+        char _choice;
 };
 
 #endif // MENU_H
