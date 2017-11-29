@@ -15,6 +15,7 @@ Menu::Menu()
         case 1:
             break;
         case 2:
+            Makeline();
             break;
         case 3:
             break;

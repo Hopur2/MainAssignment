@@ -3,4 +3,5 @@
 Makeline::Makeline()
 {
     //ctor
+    cout << "Skoğa pantanir";
 }
