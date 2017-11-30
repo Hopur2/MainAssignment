@@ -34,7 +34,7 @@ void Makeline::Seeorder()
 void Makeline::OrderSplitter()
 {
     int counter = 0;
-    for(int i = 0; i < _linereader.size(); i++)
+    for(unsigned int i = 0; i < _linereader.size(); i++)
     {
         if(_linereader[i] == '|')
         {
