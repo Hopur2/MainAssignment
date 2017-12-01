@@ -1,6 +1,6 @@
 #include "Menu.h"
 #include "Makeline.h"
-
+#include "adminmainui.h"
 Menu::Menu()
 {
     //ctor
@@ -12,6 +12,7 @@ Menu::Menu()
     cin >> _choice;
     switch(_choice) {
         case '1':
+            adminmainUI();
             break;
         case '2':
             Makeline();
