@@ -1,3 +1,5 @@
 Pepperoni 310
 Epli 130
 banani 500
+svartur 0
+svartur 0

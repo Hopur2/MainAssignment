@@ -18,9 +18,10 @@ void PizzaUI::startUI()
     char selection = '\0';
 
 
-
-        cout << "n: make pizza" << endl;
-        cout << "r: read pizza" << endl;
+        cout << "m: New pizza on menu" << endl;
+        cout << "n: Make topping" << endl;
+        cout << "r: Read toppings" << endl;
+        cout << "s: New size" << endl;
         cin >> selection;
         if(selection == 'n')
         {
