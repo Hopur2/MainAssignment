@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include "Makeline.h"
 #include "adminmainui.h"
+#include "Sales.h"
 Menu::Menu()
 {
     //ctor
@@ -18,6 +19,7 @@ Menu::Menu()
             Makeline();
             break;
         case '3':
+            Sales();
             break;
         case '4':
             break;
