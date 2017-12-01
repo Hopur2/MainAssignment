@@ -101,10 +101,11 @@
 	<string>
 	<vector>
 
-1512135747 source:c:\users\vingi\onedrive\verknamskeid\mainassignment\src\menu.cpp
+1512138955 source:c:\users\vingi\onedrive\verknamskeid\mainassignment\src\menu.cpp
 	"Menu.h"
 	"Makeline.h"
 	"adminmainui.h"
+	"Sales.h"
 
 1512135747 c:\users\vingi\onedrive\verknamskeid\mainassignment\include\adminmainui.h
 
@@ -148,10 +149,21 @@
 	"pizza.h"
 	"pizzarespository.h"
 
-1512136090 source:c:\users\vingi\onedrive\verknamskeid\mainassignment\src\sales.cpp
+1512139038 source:c:\users\vingi\onedrive\verknamskeid\mainassignment\src\sales.cpp
 	"Sales.h"
 	"Menu.h"
+	"pizzaui.h"
+	"MakeOrder.h"
 
-1512136052 c:\users\vingi\onedrive\verknamskeid\mainassignment\include\sales.h
+1512137854 c:\users\vingi\onedrive\verknamskeid\mainassignment\include\sales.h
+	<iostream>
+
+1512139038 source:c:\users\vingi\onedrive\verknamskeid\mainassignment\src\makeorder.cpp
+	"MakeOrder.h"
+	"Menu.h"
+	"pizza.h"
+	"Sales.h"
+
+1512138601 c:\users\vingi\onedrive\verknamskeid\mainassignment\include\makeorder.h
 	<iostream>
 

@@ -8,6 +8,7 @@ class Sales
 {
     public:
         Sales();
+        void salesUI();
 
     protected:
 

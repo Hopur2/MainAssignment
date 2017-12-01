@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/MakeOrder.h" />
 		<Unit filename="include/Makeline.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Sales.h" />
@@ -43,6 +44,7 @@
 		<Unit filename="include/pizzaui.h" />
 		<Unit filename="include/topping.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/MakeOrder.cpp" />
 		<Unit filename="src/Makeline.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Sales.cpp" />
