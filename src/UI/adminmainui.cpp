@@ -2,8 +2,8 @@
 #include <fstream>
 
 
-#include "adminmainui.h"
-#include "pizzaui.h"
+#include "UI/adminmainui.h"
+#include "UI/pizzaui.h"
 
 using namespace std;
 

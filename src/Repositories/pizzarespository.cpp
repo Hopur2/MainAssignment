@@ -2,8 +2,8 @@
 
 using namespace std;
 
-#include "pizzarespository.h"
-#include "pizza.h"
+#include "Repositories/pizzarespository.h"
+#include "Models/pizza.h"
 
 PizzaRespository::PizzaRespository()
 {

@@ -2,9 +2,9 @@
 
 using namespace std;
 
-#include "newpizza.h"
-#include "pizza.h"
-#include "pizzaui.h"
+#include "Repositories/newpizza.h"
+#include "Models/pizza.h"
+#include "UI/pizzaui.h"
 
 /*NewPizza::NewPizza()
 {

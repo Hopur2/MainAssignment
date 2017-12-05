@@ -1,5 +1,5 @@
-#include "newmenurespository.h"
-#include "newmenutopping.h"
+#include "Repositories/newmenurespository.h"
+#include "Services/newmenutopping.h"
 using namespace std;
 NewMenuRespository::NewMenuRespository()
 {

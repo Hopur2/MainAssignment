@@ -1,15 +1,15 @@
 #ifndef PIZZARESPOSITORY_H
 #define PIZZARESPOSITORY_H
 
-#include "pizza.h"
-
-class NewPizza
+#include "Models/pizza.h"
+class PizzaRespository
 {
     public:
-        NewPizza();
-        virtual ~NewPizza();
+        PizzaRespository();
+        virtual ~PizzaRespository();
 
-        void storeNewPizza(const Pizza& pizza);
+        void storePizza(const Pizza& pizza);
+
         Pizza retrievePizza();
 
 

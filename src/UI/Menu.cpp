@@ -1,7 +1,7 @@
-#include "Menu.h"
-#include "Makeline.h"
-#include "adminmainui.h"
-#include "Sales.h"
+#include "UI/Menu.h"
+#include "Services/Makeline.h"
+#include "UI/adminmainui.h"
+#include "UI/Sales.h"
 Menu::Menu()
 {
     Sales sales;

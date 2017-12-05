@@ -4,12 +4,12 @@
 using namespace std;
 
 
-#include "pizzaui.h"
-#include "pizza.h"
-#include "pizzarespository.h"
+#include "UI/pizzaui.h"
+#include "Models/pizza.h"
+#include "Repositories/pizzarespository.h"
 
-#include "newmenutopping.h"
-#include "newmenurespository.h"
+#include "Services/newmenutopping.h"
+#include "Repositories/newmenurespository.h"
 
 
 

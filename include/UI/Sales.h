@@ -1,9 +1,9 @@
 #ifndef SALES_H
 #define SALES_H
 #include <iostream>
-#include "Menu.h"
-#include "createpizza.h"
-#include "OrderRepository.h"
+#include "UI/Menu.h"
+#include "Services/CreatePizza.h"
+#include "Repositories/OrderRepository.h"
 
 
 
