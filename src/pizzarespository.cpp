@@ -4,7 +4,7 @@ using namespace std;
 
 #include "pizzarespository.h"
 #include "pizza.h"
-#include "pizzaui.h"
+
 PizzaRespository::PizzaRespository()
 {
     //ctor
@@ -17,6 +17,7 @@ PizzaRespository::~PizzaRespository()
 void PizzaRespository::storePizza(const Pizza& pizza)
 {
     ofstream fout;
+
     fout.open("toppings.txt", ios::app);
 
     fout << pizza;
@@ -35,3 +36,6 @@ Pizza PizzaRespository::retrievePizza()
 
     return pizza;
 }
+
+
+

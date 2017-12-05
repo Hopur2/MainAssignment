@@ -1,11 +1,18 @@
 #include <iostream>
 #include <fstream>
-#include <ostream>
+
 using namespace std;
+
 
 #include "pizzaui.h"
 #include "pizza.h"
 #include "pizzarespository.h"
+
+#include "newmenutopping.h"
+#include "newmenurespository.h"
+
+
+
 
 PizzaUI::PizzaUI()
 {
@@ -18,12 +25,49 @@ void PizzaUI::startUI()
     char selection = '\0';
 
 
-        cout << "m: New pizza on menu" << endl;
-        cout << "n: Make topping" << endl;
-        cout << "r: Read toppings" << endl;
-        cout << "s: New size" << endl;
+        cout << "1: New pizza on menu" << endl;
+        cout << "2: Make topping" << endl;
+        cout << "3: Read toppings" << endl;
+        cout << "4: New size" << endl;
         cin >> selection;
-        if(selection == 'n')
+
+
+        if(selection == '1')
+        {
+
+          int topCnt;
+          string name;
+          int price;
+    cout << "Name: ";
+    cin >> name;
+
+    cout << "how many toppings: ";
+    cin >> topCnt;
+
+    cout << "Price: ";
+    cin >> price;
+    NewMenuTopping menupizza(topCnt, name, price);
+
+    for(int i = 0; i < topCnt; i++)
+    {
+        cout << "Topping " << i + 1 << ": ";
+        MenuTopping topping;
+        cin >> topping;
+       menupizza.menuaddTopping(topping);
+
+    }
+
+    cout << menupizza;
+
+        NewMenuRespository repoo;
+        repoo.newMenu(menupizza);
+
+cout << endl;
+        }
+
+
+
+        if(selection == '2')
         {
           int topCnt;
     cout << "How many toppings: ";
@@ -45,7 +89,7 @@ void PizzaUI::startUI()
 
 cout << endl;
         }
-        if(selection == 'r')
+        if(selection == '3')
         {
            string str;
     ifstream fin;
@@ -69,8 +113,8 @@ cout << endl;
     while (!fin.is_open());
     fin.close();
 
-        }
+}        }
 
 
 
-}
+

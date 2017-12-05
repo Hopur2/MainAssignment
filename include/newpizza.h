@@ -2,14 +2,14 @@
 #define PIZZARESPOSITORY_H
 
 #include "pizza.h"
-class PizzaRespository
+
+class NewPizza
 {
     public:
-        PizzaRespository();
-        virtual ~PizzaRespository();
+        NewPizza();
+        virtual ~NewPizza();
 
-        void storePizza(const Pizza& pizza);
-
+        void storeNewPizza(const Pizza& pizza);
         Pizza retrievePizza();
 
 
