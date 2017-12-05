@@ -25,6 +25,7 @@ class CreatePizza
         vector<string> _toppings;
         char _pizzaSize;
         string _comments;
+        int _ID;
 };
 
 #endif // PIZZA_H

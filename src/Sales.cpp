@@ -32,34 +32,20 @@ void Sales::salesUI()
 
 void Sales::create_pizza()
 {
-    /*int topCnt;
-    cout << "How many toppings: ";
-    cin >> topCnt;*/
-
     CreatePizza pizza;
     pizza.makepizza(pizza);
 
-    /*for(int i = 0; i < topCnt; i++)
-    {
-        Topping topping;
-        cin >> topping;
-       pizza.addTopping(topping);
-
-    }*/
-
-        cout << pizza;
-        OrderRepository repo;
-        repo.storePizza(pizza);
-
-
-cout << endl;
+    cout << pizza;
+    OrderRepository repo;
+    repo.storePizza(pizza);
+    cout << endl;
 }
 
 void Sales::read_order()
 {
     string str;
     ifstream fin;
-    fin.open("Orders.txt");
+    fin.open("Temp.txt");
 
     do
     {

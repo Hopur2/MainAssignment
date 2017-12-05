@@ -3,14 +3,17 @@ CreatePizza::CreatePizza()
 {
     _pizzaSize = '\0';
     _comments = "";
+    _ID = 2017;
 
 }
 
-unsigned int CreatePizza::size() const{
+unsigned int CreatePizza::size() const
+{
     return _toppings.size();
 }
 
-string CreatePizza::at(int i) const{
+string CreatePizza::at(int i) const
+{
    return _toppings[i];
 }
 
@@ -18,7 +21,8 @@ void CreatePizza::addTopping(CreatePizza& pizza)
 {
     cout << "press q to stop adding toppings" << endl;
     char input;
-    do{
+    do
+    {
         cout << "h - ham | p - pepperoni | m - mushroom" <<endl;
         cin >> input;
         if(input == 'h'){
@@ -51,8 +55,10 @@ istream& operator >>(istream& in, CreatePizza& createpizza)
     return in;
 }*/
 
-void CreatePizza::makepizza(CreatePizza& pizza){
-
+void CreatePizza::makepizza(CreatePizza& pizza)
+{
+    cout << "enter numerical ID for order: ";
+    cin >> pizza._ID;
     cout << "pick a size L - large, M - medium or S - small" << endl;
     cin >> pizza._pizzaSize;
 
@@ -64,11 +70,12 @@ void CreatePizza::makepizza(CreatePizza& pizza){
 
 ostream& operator <<(ostream& out, const CreatePizza& pizza)
 {
-    //out << ID <<"|" << delivery <<"|" << location <<"|";
+    out << pizza._ID <<"|"/* << delivery <<"|" << location <<"|"*/;
     out << pizza._pizzaSize<< "|";
 
 
-    for(unsigned int i = 0; i < createpizza.size();i++){
+    for(unsigned int i = 0; i < pizza.size();i++)
+    {
         out << pizza._toppings.at(i)<< ",";
     }
     out << "|";
