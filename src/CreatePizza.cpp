@@ -53,25 +53,27 @@ istream& operator >>(istream& in, CreatePizza& createpizza)
 
 void CreatePizza::makepizza(CreatePizza& pizza){
 
-    cout << "pick a size L - large, m - medium or s - small" << endl;
+    cout << "pick a size L - large, M - medium or S - small" << endl;
     cin >> pizza._pizzaSize;
 
     pizza.addTopping(pizza);
     cout << "Add a comment to the order: ";
-
+    cin.ignore();
     getline(cin,pizza._comments);
 }
 
-ostream& operator <<(ostream& out, const CreatePizza& createpizza)
+ostream& operator <<(ostream& out, const CreatePizza& pizza)
 {
     //out << ID <<"|" << delivery <<"|" << location <<"|";
-    out << createpizza._pizzaSize<< "|";
+    out << pizza._pizzaSize<< "|";
 
 
     for(unsigned int i = 0; i < createpizza.size();i++){
-        out << createpizza._toppings.at(i)<< ",";
+        out << pizza._toppings.at(i)<< ",";
     }
     out << "|";
+    out << pizza._comments<< "|";
+    //out <<  <<pizza._price <<"|"<< pizza._status<<"|"<<pizza._paid<<"|";
     out << endl;
 
     return out;
