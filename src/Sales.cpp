@@ -1,31 +1,26 @@
 #include "Sales.h"
-#include "Menu.h"
-#include "pizzaui.h"
-#include "MakeOrder.h"
 
 Sales::Sales()
 {
-    salesUI();
+
 }
 
 void Sales::salesUI()
 {
-    MakeOrder order;
-
      cout << "Welcome Sales persons" << endl;
-    cout << "1. make pizza" << endl;
+    cout << "1. make order" << endl;
     cout << "2. read Order" << endl;
-    cout << "4. Go To Main Menu" << endl;
-    cin >> _choice;
-    switch(_choice) {
+    cout << "3. Go To Main Menu" << endl;
+    char choice;
+    cin >> choice;
+    switch(choice) {
         case '1':
-            order.makeOrderUI();
+            create_pizza();
             break;
         case '2':
+            read_order();
             break;
         case '3':
-            break;
-        case '4':
             Menu();
             break;
         default:
@@ -33,4 +28,55 @@ void Sales::salesUI()
             salesUI();
             break;
     }
+}
+
+void Sales::create_pizza()
+{
+    /*int topCnt;
+    cout << "How many toppings: ";
+    cin >> topCnt;*/
+
+    CreatePizza pizza;
+    pizza.makepizza(pizza);
+
+    /*for(int i = 0; i < topCnt; i++)
+    {
+        Topping topping;
+        cin >> topping;
+       pizza.addTopping(topping);
+
+    }*/
+
+        cout << pizza;
+        OrderRepository repo;
+        repo.storePizza(pizza);
+
+
+cout << endl;
+}
+
+void Sales::read_order()
+{
+    string str;
+    ifstream fin;
+    fin.open("Orders.txt");
+
+    do
+    {
+        if(fin.is_open())
+        {
+            while(!fin.eof())
+            {
+                getline(fin,str);
+                cout << str << endl;
+            }
+        }
+        else
+        {
+            cout << "File note open" << endl;
+        }
+    }
+    while (!fin.is_open());
+    fin.close();
+
 }

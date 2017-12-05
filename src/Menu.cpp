@@ -4,6 +4,7 @@
 #include "Sales.h"
 Menu::Menu()
 {
+    Sales sales;
     //ctor
     cout << "Welcome to the *we need a name* Pizza shop" << endl;
     cout << "1. Admin" << endl;
@@ -19,7 +20,7 @@ Menu::Menu()
             Makeline();
             break;
         case '3':
-            Sales();
+            sales.salesUI();
             break;
         case '4':
             break;
