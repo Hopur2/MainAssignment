@@ -1,4 +1,3 @@
-
 l|ham,|Keep it hot
 
 l|ham,mushroom,|juicy very hot|
@@ -8,4 +7,6 @@ l|ham,mushroom,|juicy very hot|
 69|l|ham,pepperoni,mushroom,|Hafa Juicy bois|
 
 25|m|pepperoni,mushroom,|PS2|
+
+68|l|ham,pepperoni,mushroom,|Konan er picky|
 
