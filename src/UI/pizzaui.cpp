@@ -13,7 +13,7 @@ using namespace std;
 
 
 
-
+//
 PizzaUI::PizzaUI()
 {
     //ctor
@@ -76,7 +76,7 @@ cout << endl;
     Pizza pizza(topCnt);
 
     for(int i = 0; i < topCnt; i++)
-    {
+    {   cout << "Name and price: ";
         Topping topping;
         cin >> topping;
        pizza.addTopping(topping);

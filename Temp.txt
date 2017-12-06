@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 0|0|R¢sarimi 4|l|ham,pepperoni,mushroom,|HOT BABY|
 1|1|Lowway Street 12|77|ham,|2 + 2 = 3?|
 2|1|Highway Street 11|L|ham,pepperoni,|lololol|
@@ -5,3 +6,17 @@
 3|1|Middleway Street 13|l|ham,mushroom|no|4400|
 3|1|Highway Street 11|m|ham,pepperoni|plead the fifth|2100|
 32|1|Lowway Street 12|l|ham,mushroom|Spicy boiiiis|2400|Preparation|n|
+=======
+l|ham,|Keep it hot
+
+l|ham,mushroom,|juicy very hot|
+
+219|l|ham,pepperoni,|Viktor   etta|
+
+69|l|ham,pepperoni,mushroom,|Hafa Juicy bois|
+
+25|m|pepperoni,mushroom,|PS2|
+
+68|l|ham,pepperoni,mushroom,|Konan er picky|
+
+>>>>>>> 1a492552ccf89e228a5ced00079a4eb73103b7a6
