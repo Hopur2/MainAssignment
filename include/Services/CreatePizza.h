@@ -16,6 +16,8 @@ class CreatePizza
         unsigned int size() const;
         string at(int i) const;
         void makepizza(CreatePizza& pizza);
+        void Stores(CreatePizza& pizza);
+        int getprice(CreatePizza& pizza);
 
         //friend istream& operator >>(istream& in, CreatePizza& createpizza);
 
@@ -26,6 +28,12 @@ class CreatePizza
         char _pizzaSize;
         string _comments;
         int _ID;
+        char _delivery;
+        string _place;
+        int _price;
+        string _status;
+        char _paid;
+
 };
 
 #endif // PIZZA_H

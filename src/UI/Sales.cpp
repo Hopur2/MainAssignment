@@ -7,18 +7,21 @@ Sales::Sales()
 
 void Sales::salesUI()
 {
-     cout << "Welcome Sales persons" << endl;
+    cout << "Welcome Sales persons" << endl;
     cout << "1. make order" << endl;
     cout << "2. read Order" << endl;
     cout << "3. Go To Main Menu" << endl;
     char choice;
     cin >> choice;
-    switch(choice) {
+    switch(choice)
+    {
         case '1':
             create_pizza();
+            salesUI();
             break;
         case '2':
             read_order();
+            salesUI();
             break;
         case '3':
             Menu();
