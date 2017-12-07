@@ -26,7 +26,7 @@ void MakelineServices::PrintDoneOrders()
 
 void MakelineServices::DoneOrder(char input)
 {
-    int temp = input - '0';
+    unsigned int temp = input - '0';
     if(temp < 0 || temp > theorders.size())
     {
         throw input;

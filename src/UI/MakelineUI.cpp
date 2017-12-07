@@ -12,12 +12,12 @@ void MakelineUI::MainMenu()
     while(true) {
         if(showdone)
         {
-            cout << "Showing Done Orders ---- press r to return" << endl;
+            cout << "Showing Done Orders ---- press r to return and q to quit" << endl;
             MS.PrintDoneOrders();
         }
         else
         {
-            cout << "Showing Orders to do ---- press r to show done orders" << endl;
+            cout << "Showing Orders to do ---- press r to show done orders and q to quit" << endl;
             MS.PrintOrders();
         }
         cout << "What Order have you done?" << endl;

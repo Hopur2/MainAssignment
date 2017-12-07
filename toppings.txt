@@ -17,3 +17,6 @@ lkjkl 54 pEPPERI 23
 SDRDF 324
 KLMM 435
 pepp 200
+pepp 100
+ski 200
+ananss 300
