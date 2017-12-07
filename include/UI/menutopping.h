@@ -9,7 +9,7 @@ class MenuTopping
         MenuTopping();
         MenuTopping(char *name);
         virtual ~MenuTopping();
-
+        int getID();
         friend istream& operator >>(istream& in, MenuTopping& menutopping);
 
         friend ostream& operator <<(ostream& out, const MenuTopping& menutopping);

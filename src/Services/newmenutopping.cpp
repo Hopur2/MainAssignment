@@ -2,12 +2,13 @@
 #include <fstream>
 #include <stddef.h>
 using namespace std;
-NewMenuTopping::NewMenuTopping()
+NewMenuTopping::NewMenuTopping(int id)
 {
     clean();
     toppingCount = 0;
     menutoppings = 0;
     currentToppingNum = 0;
+    _id = id;
 }
 NewMenuTopping::NewMenuTopping(int numberOfToppings,string name, int price)
 {
@@ -15,7 +16,8 @@ NewMenuTopping::NewMenuTopping(int numberOfToppings,string name, int price)
     _price = price;
     toppingCount = numberOfToppings;
     menutoppings = new MenuTopping[toppingCount];
-     currentToppingNum = 0;
+    currentToppingNum = 0;
+
 }
 NewMenuTopping::~NewMenuTopping()
 {
@@ -50,6 +52,37 @@ void NewMenuTopping::clean()
     }
 
 }
+
+
+int NewMenuTopping::getID()
+{
+    ifstream infile("menu.txt", ios::in);
+
+    int id = 0;
+
+    while(!infile.eof())
+    {
+        infile >> id;
+
+
+
+        if(infile.eof())
+        {
+            break;
+        }
+
+    }
+
+    id += 1;
+    infile.close();
+    cout << id << endl;
+    return id;
+
+}
+
+
+
+
 istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 {
     int toppingCount = 0;
@@ -69,7 +102,10 @@ istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
 {
    // out << "Pizza with toppings: " << endl;
-    out << pizza._name << " : ";
+
+//    pizza._id = pizza.getID();
+    //out <<  << " ";
+    out << pizza._name << ": ";
 
     for(int i = 0; i < pizza.toppingCount; i++)
     {

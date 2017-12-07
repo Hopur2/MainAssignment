@@ -46,6 +46,7 @@ void PizzaUI::startUI()
 
     cout << "Price: ";
     cin >> price;
+    NewMenuTopping getID();
     NewMenuTopping menupizza(topCnt, name, price);
 
     for(int i = 0; i < topCnt; i++)

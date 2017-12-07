@@ -13,6 +13,7 @@ NewMenuRespository::~NewMenuRespository()
 
 void NewMenuRespository::newMenu(const NewMenuTopping& newmenutopping)
  {
+
      ofstream fout;
 
     fout.open("menu.txt", ios::app);
