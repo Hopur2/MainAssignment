@@ -16,8 +16,12 @@ class Sales
         void salesUI();
         void create_pizza();
         void read_order();
+        vector<string> addTopping(vector<string>& toppings);
+        getprice(char pizzaSize,vector<string> toppings);
+        string Stores();
     private:
         OrderRepository repo;
+        vector<CreatePizza> Orders;
 };
 
 #endif // SALES_H

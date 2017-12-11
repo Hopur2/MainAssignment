@@ -1,4 +1,4 @@
-#include "PickUpUI.h"
+#include "UI/PickUpUI.h"
 
 PickUpUI::PickUpUI()
 {
