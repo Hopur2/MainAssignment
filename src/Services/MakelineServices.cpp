@@ -11,6 +11,7 @@ void MakelineServices::SetStore(string store)
 }
 void MakelineServices::GetOrders()
 {
+    fw.ReadFile("Orders.txt");
     theorders = fw.PassOrders();
 }
 void MakelineServices::PrintOrders()
@@ -44,6 +45,6 @@ void MakelineServices::DoneOrder(char input)
 }
 void MakelineServices::Finished()
 {
-    fw.WriteOrders(theorders, ordersdone);
+    fw.WriteOrders("Orders.txt", "DoneOrders.txt", theorders, ordersdone);
 }
 

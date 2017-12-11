@@ -1,6 +1,9 @@
 #ifndef MENU_H
 #define MENU_H
-#include <iostream>
+#include "UI/MakelineUI.h"
+#include "UI/adminmainui.h"
+#include "UI/Sales.h"
+#include "UI/DeliveryUI.h"
 
 using namespace std;
 

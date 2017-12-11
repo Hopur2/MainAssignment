@@ -10,10 +10,10 @@ class MakelineFileWorker
 {
     public:
         MakelineFileWorker();
-        void ReadFile();
+        void ReadFile(string file);
         void FilterFile(string lineorder);
         int Convertoint(string toconvert);
-        void WriteOrders(vector<Order> Orders, vector<Order> DoneOrders);
+        void WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders);
         vector<Order> PassOrders();
    private:
         vector<Order> _Orders;

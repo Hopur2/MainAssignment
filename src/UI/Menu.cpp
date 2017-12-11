@@ -1,8 +1,5 @@
 #include "UI/Menu.h"
-#include "UI/MakelineUI.h"
-#include "UI/adminmainui.h"
-#include "UI/Sales.h"
-#include "UI/DeliveryUI.h"
+
 Menu::Menu()
 {
     Sales sales;
