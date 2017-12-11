@@ -84,9 +84,13 @@ void Sales::create_pizza()
         price = getprice(pizzaSize,toppings);
         CreatePizza pizza(toppings,pizzaSize,comments,id,delivery,place,price,status,paid);
         cout << pizza << endl;
-        OrderRepository repo;
+
         repo.storePizza(pizza);
+        toppings.clear();
     }
+    //read_order();
+    CreatePizza pizza;
+    cout << pizza.get_Order_Price(id) << endl;
     cout << endl;
 }
 
@@ -174,26 +178,5 @@ string Sales::Stores()
 
 void Sales::read_order()
 {
-    string str;
-    ifstream fin;
-    fin.open("Temp.txt");
-
-    do
-    {
-        if(fin.is_open())
-        {
-            while(!fin.eof())
-            {
-                getline(fin,str);
-                cout << str << endl;
-            }
-        }
-        else
-        {
-            cout << "File note open" << endl;
-        }
-    }
-    while (!fin.is_open());
-    fin.close();
 
 }

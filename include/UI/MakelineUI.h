@@ -8,6 +8,7 @@ class MakelineUI
 {
     public:
         MakelineUI();
+        void PickStore();
         void MainMenu();
     private:
         MakelineServices MS;

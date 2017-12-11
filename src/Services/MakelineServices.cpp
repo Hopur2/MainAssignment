@@ -5,6 +5,10 @@ MakelineServices::MakelineServices()
     //ctor
     GetOrders();
 }
+void MakelineServices::SetStore(string store)
+{
+    _store = store;
+}
 void MakelineServices::GetOrders()
 {
     theorders = fw.PassOrders();
@@ -13,7 +17,10 @@ void MakelineServices::PrintOrders()
 {
     for(unsigned int i = 0; i < theorders.size(); i++)
     {
-        cout << i << " " << theorders[i];
+        if(_store == theorders[i].GetLocation())
+        {
+            cout << i << " " << theorders[i];
+        }
     }
 }
 void MakelineServices::PrintDoneOrders()
@@ -26,7 +33,7 @@ void MakelineServices::PrintDoneOrders()
 
 void MakelineServices::DoneOrder(char input)
 {
-    int temp = input - '0';
+    unsigned int temp = input - '0';
     if(temp < 0 || temp > theorders.size())
     {
         throw input;

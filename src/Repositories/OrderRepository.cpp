@@ -16,6 +16,32 @@ void OrderRepository::storePizza(const CreatePizza& pizza)
     fout.close();
 }
 
+void OrderRepository::ReadFile()
+{
+    string str;
+    ifstream fin;
+    fin.open("Temp.txt");
+
+    do
+    {
+        if(fin.is_open())
+        {
+            while(!fin.eof())
+            {
+                getline(fin,str);
+                FilterOrders(str);
+            }
+        }
+        else
+        {
+            cout << "File note open" << endl;
+        }
+    }
+    while (!fin.is_open());
+    fin.close();
+}
+
+
 void OrderRepository::FilterOrders(string line)
 {
     string order[8];

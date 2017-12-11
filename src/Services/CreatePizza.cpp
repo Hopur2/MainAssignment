@@ -1,14 +1,15 @@
 #include "Services/CreatePizza.h"
 CreatePizza::CreatePizza()
 {
-    _pizzaSize = '\0';
+
+    /*_pizzaSize = '\0';
     _comments = "Null";
     _ID = 2017;
     _place = "1";
     _delivery = '1';
     _price = 2000;
     _status = "Preparation";
-    _paid = 'n';
+    _paid = 'n';*/
 
 }
 

@@ -15,10 +15,10 @@ class OrderRepository
         int Converttoint(string input);
         vector<CreatePizza> PassRecords();
         string Converttostring(int input);
+        void ReadFile();
 
-    protected:
-        vector<CreatePizza> Orders;
     private:
+        vector<CreatePizza> Orders;
 };
 
 #endif // ORDERREPOSITORY_H
