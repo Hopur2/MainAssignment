@@ -7,6 +7,7 @@ MakelineUI::MakelineUI()
 
 void MakelineUI::MainMenu()
 {
+    PickStore();
     char input;
     bool showdone = false;
     while(true) {
@@ -44,4 +45,18 @@ void MakelineUI::MainMenu()
             }
         }
     }
+}
+
+void MakelineUI::PickStore()
+{
+    string store;
+    while(store != "1" && store != "2" && store != "3")
+    {
+        cout << "What store are you in?" << endl;
+        cout << "1 - Highway Street 11" << endl;
+        cout << "2 - Lowway Street 12" << endl;
+        cout << "3 - Middleway Street 13" << endl;
+        cin >> store;
+    }
+    MS.SetStore(store);
 }

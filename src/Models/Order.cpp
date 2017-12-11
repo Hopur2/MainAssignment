@@ -15,6 +15,11 @@ Order::Order(int ID, int Deliver, string Location, char Size, string Toppings, s
     _verbose = true;
 }
 
+string Order::GetLocation()
+{
+    return _location;
+}
+
 void Order::SetVerbose(bool b)
 {
     _verbose = b;

@@ -7,6 +7,7 @@ class MakelineServices
 {
     public:
         MakelineServices();
+        void SetStore(string store);
         void GetOrders();
         void PrintOrders();
         void PrintDoneOrders();
@@ -15,6 +16,7 @@ class MakelineServices
     private:
         vector<Order> theorders;
         vector<Order> ordersdone;
+        string _store;
         MakelineFileWorker fw;
 };
 
