@@ -8,9 +8,9 @@ class NewMenuTopping
 {
     public:
         NewMenuTopping();
-        NewMenuTopping(int numberOfToppings, string name,int price);
+        NewMenuTopping(int id, int numberOfToppings, string name,int price);
         virtual ~NewMenuTopping();
-
+        int getID();
         void initialize(int numberOfToppings);
         void clean();
 
@@ -26,8 +26,8 @@ class NewMenuTopping
         int toppingCount;
         string _name;
         int _price;
-
         int currentToppingNum;
+        int _id;
 };
 
 #endif // PIZZA_H

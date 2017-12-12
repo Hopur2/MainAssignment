@@ -10,7 +10,7 @@ class NewMenuRespository
     public:
         NewMenuRespository();
         virtual ~NewMenuRespository();
-
+        void retrievePizza();
         void newMenu(const NewMenuTopping& newmenutopping);
     protected:
     private:

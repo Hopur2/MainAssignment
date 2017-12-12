@@ -9,8 +9,9 @@ Topping::Topping()
 
 Topping::Topping(char *name, int price)
 {
-    strcpy(this->name, name);
-    this-> price = price;
+
+    strcpy(_name, name);
+    _price = price;
 }
 
 Topping::~Topping()
@@ -20,19 +21,16 @@ Topping::~Topping()
 
 istream& operator >>(istream& in, Topping& topping)
 {
-    //cout << "Name: ";
-    in >> topping.name;
 
-   // cout << "Price: ";
-    in >> topping.price;
-
+    in >> topping._name;
+    in >> topping._price;
     return in;
 }
 
 ostream& operator <<(ostream& out, const Topping& topping)
 {
 
-    out << topping.name << " " << topping.price;
+    out << topping._name << "|" << topping._price;
 
 
     return out;

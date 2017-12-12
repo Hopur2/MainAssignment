@@ -1,4 +1,5 @@
 #include <string.h>
+#include <fstream>
 #include "UI/menutopping.h"
 
 MenuTopping::MenuTopping()
@@ -15,6 +16,7 @@ MenuTopping::~MenuTopping()
 
 MenuTopping::MenuTopping(char *name)
 {
+
     strcpy(this->name, name);
 
 }
@@ -34,7 +36,7 @@ istream& operator >>(istream& in, MenuTopping& menutopping)
 ostream& operator <<(ostream& out, const MenuTopping& menutopping)
 {
 
-    out << menutopping.name << " ";
+    out << menutopping.name;
 
 
     return out;

@@ -4,18 +4,17 @@
 using namespace std;
 NewMenuTopping::NewMenuTopping()
 {
-    clean();
-    toppingCount = 0;
-    menutoppings = 0;
-    currentToppingNum = 0;
+
 }
-NewMenuTopping::NewMenuTopping(int numberOfToppings,string name, int price)
+NewMenuTopping::NewMenuTopping(int id, int numberOfToppings,string name, int price)
 {
+    _id = id;
     _name = name;
     _price = price;
     toppingCount = numberOfToppings;
     menutoppings = new MenuTopping[toppingCount];
-     currentToppingNum = 0;
+    currentToppingNum = 0;
+
 }
 NewMenuTopping::~NewMenuTopping()
 {
@@ -33,7 +32,7 @@ void NewMenuTopping::menuaddTopping(MenuTopping menutopping)
 {
     if( currentToppingNum < toppingCount)
     {
-        menutoppings[ currentToppingNum] = menutopping;
+        menutoppings[currentToppingNum] = menutopping;
         currentToppingNum++;
     }
 
@@ -45,11 +44,18 @@ void NewMenuTopping::clean()
     {
         delete[] menutoppings;
         toppingCount = 0;
-        menutoppings = NULL;
+        menutoppings = 0;
         currentToppingNum = 0;
     }
 
 }
+
+
+
+
+
+
+
 istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 {
     int toppingCount = 0;
@@ -68,14 +74,14 @@ istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 
 ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
 {
-   // out << "Pizza with toppings: " << endl;
-    out << pizza._name << " : ";
+    out << pizza._id << "|";
+    out << pizza._name << "|";
 
     for(int i = 0; i < pizza.toppingCount; i++)
     {
-        out << pizza.menutoppings[i] << " ";
+        out << pizza.menutoppings[i] << "|";
     }
-    out << pizza._price << endl;
+    out << pizza._price << endl << endl;
 
 
     return out;
