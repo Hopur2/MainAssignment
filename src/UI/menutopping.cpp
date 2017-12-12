@@ -36,7 +36,7 @@ istream& operator >>(istream& in, MenuTopping& menutopping)
 ostream& operator <<(ostream& out, const MenuTopping& menutopping)
 {
 
-    out << menutopping.name << " ";
+    out << menutopping.name;
 
 
     return out;

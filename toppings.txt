@@ -1,27 +1,23 @@
-Pepperoni 310
-Epli 130
-banani 500
-
-Pera 255
-Hakk 239
-Beikon 400000
-Pizza with toppings: 
-1 abc 12
-1 banani 100
-3 banani 12
-eplo 32
-ananas 23
-2 pepperoni 500
-ieojr 43 anans 100
-lkjkl 54 pEPPERI 23
-SDRDF 324
-KLMM 435
-<<<<<<< HEAD
-ewr 23
-ewrwre 324
-erer 443
-a 32
-ere 32
-=======
-pepp 200
->>>>>>> 3fa78692db7a3a3a5e80570be2c03f199008f994
+jioj|3
+kopk|213123
+anv|23
+dsfds|234
+appelsna|500
+banani|5000
+abc|26
+fe|25
+abv|34
+sdf|34
+dsf|23 hallo 
+sdf|45 hallo 
+0x2cb0544
+0x2cb0544
+wer|156
+sdf|156
+fe|984|fsdfs|456|zxczx|987|
+Hakk|500
+banani|100
+baun|5
+2|ab|5
+fwe|5
+4239808|f|5

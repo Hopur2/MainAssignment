@@ -16,8 +16,9 @@ class Topping
 
     protected:
     private:
-        char name[32];
-        int price;
+
+        char _name[32];
+        int _price;
 
 };
 

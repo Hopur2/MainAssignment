@@ -7,8 +7,8 @@ using namespace std;
 class NewMenuTopping
 {
     public:
-        NewMenuTopping(int id);
-        NewMenuTopping(int numberOfToppings, string name,int price);
+        NewMenuTopping();
+        NewMenuTopping(int id, int numberOfToppings, string name,int price);
         virtual ~NewMenuTopping();
         int getID();
         void initialize(int numberOfToppings);

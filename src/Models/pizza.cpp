@@ -1,7 +1,4 @@
 #include "Models/pizza.h"
-
-
-#include <stddef.h>
 using namespace std;
 Pizza::Pizza()
 {
@@ -12,9 +9,10 @@ Pizza::Pizza()
 }
 Pizza::Pizza(int numberOfToppings)
 {
+
     toppingCount = numberOfToppings;
     toppings = new Topping[toppingCount];
-     currentToppingNum = 0;
+    currentToppingNum = 0;
 }
 Pizza::~Pizza()
 {
@@ -32,11 +30,9 @@ void Pizza::addTopping(Topping topping)
 {
     if( currentToppingNum < toppingCount)
     {
-        toppings[ currentToppingNum] = topping;
+        toppings[currentToppingNum] = topping;
         currentToppingNum++;
     }
-
-
 }
 void Pizza::clean()
 {
@@ -47,7 +43,6 @@ void Pizza::clean()
         toppings = NULL;
         currentToppingNum = 0;
     }
-
 }
 istream& operator >>(istream& in, Pizza& pizza)
 {
@@ -58,23 +53,17 @@ istream& operator >>(istream& in, Pizza& pizza)
     for(int i = 0; i < pizza.toppingCount; i++)
     {
         in >> topping;
-        pizza.addTopping(topping);
-         //   in >> pizza.toppings[i];
+//        pizza.addTopping(topping);
     }
-
     return in;
 }
 
 ostream& operator <<(ostream& out, const Pizza& pizza)
 {
-   // out << "Pizza with toppings: " << endl;
-   // out << pizza.toppingCount << " ";
-
+    out << pizza._id << "|";
     for(int i = 0; i < pizza.toppingCount; i++)
     {
         out << pizza.toppings[i] << endl;
     }
-
-
     return out;
 }
