@@ -38,7 +38,7 @@ void Sales::create_pizza()
     vector<string> toppings;
     char pizzaSize;
     string comments;
-    int id;
+    string id;
     char delivery;
     string place;
     int price;
@@ -82,15 +82,15 @@ void Sales::create_pizza()
         addTopping(toppings);
 
         price = getprice(pizzaSize,toppings);
-        CreatePizza pizza(toppings,pizzaSize,comments,id,delivery,place,price,status,paid);
+        CreateOrder pizza(toppings,pizzaSize,comments,id,delivery,place,price,status,paid);
         cout << pizza << endl;
 
-        repo.storePizza(pizza);
+        order_service.add_pizza_to_order(pizza);
         toppings.clear();
     }
     //read_order();
     CreatePizza pizza;
-    cout << pizza.get_Order_Price(id) << endl;
+    //cout << pizza.get_Order_Price(id) << endl;
     cout << endl;
 }
 
@@ -178,5 +178,5 @@ string Sales::Stores()
 
 void Sales::read_order()
 {
-
+    order_service.get_Order_Price("5812345");
 }
