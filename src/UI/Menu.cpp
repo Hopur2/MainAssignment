@@ -1,11 +1,10 @@
 #include "UI/Menu.h"
-#include "UI/MakelineUI.h"
-#include "UI/adminmainui.h"
-#include "UI/Sales.h"
+
 Menu::Menu()
 {
     Sales sales;
     MakelineUI makeline;
+    DeliveryUI delivery;
     while(true)
     {
         //ctor
@@ -26,6 +25,7 @@ Menu::Menu()
                 sales.salesUI();
                 break;
             case '4':
+                delivery.MainMenu();
                 break;
             default:
                 cout << "Try again" << endl;

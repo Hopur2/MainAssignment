@@ -1,6 +1,6 @@
 #ifndef CREATEPIZZA_H
 #define CREATEPIZZA_H
-
+//#include "Repositories/OrderRepository.h"
 #include <fstream>
 #include <vector>
 #include <string>
@@ -11,19 +11,18 @@ class CreatePizza
     public:
 
         CreatePizza();
-
-        void addTopping(CreatePizza& pizza);
+        CreatePizza(vector<string> toppings, char pizzaSize,string comments,int ID,char delivery,string place,int price,string status,char paid);
+        //CreatePizza(int ID,int delivery, string place, char pizzaSize, vector<string> toppings,string comments,int price,string status,int paid);
         unsigned int size() const;
         string at(int i) const;
-        void makepizza(CreatePizza& pizza);
-        void Stores(CreatePizza& pizza);
-        int getprice(CreatePizza& pizza);
-
-        //friend istream& operator >>(istream& in, CreatePizza& createpizza);
+        int get_price();
+        int get_id();
+        int get_Order_Price(int id);
 
         friend ostream& operator <<(ostream& out, const CreatePizza& createpizza);
 
     private:
+        vector<CreatePizza> Orders;
         vector<string> _toppings;
         char _pizzaSize;
         string _comments;
@@ -33,7 +32,6 @@ class CreatePizza
         int _price;
         string _status;
         char _paid;
-
 };
 
 #endif // PIZZA_H
