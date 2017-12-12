@@ -3,11 +3,12 @@
 
 
 //#include "Models/deletemenu.h"
+
 #include "Models/pizza.h"
 #include "Models/newstuff.h"
 #include "Services/newmenutopping.h"
 #include "Services/newlocation.h"
-
+#include "Models/topping.h"
 #include <fstream>
 #include <vector>
 #include <sstream>
@@ -25,16 +26,17 @@ class PizzaRespository
         void GetLocation();
         void newMenu(const NewMenuTopping& newmenutopping);
         void NewLocation(const Newlocation& location);
-   /*     void ReadFile();
-        int Convertoint(string toconvert);
-        void FilterFile(string lineorder);
-//        void WriteOrders(vector<Order> Orders, vector<Order> DoneOrders);
-        vector<DeleteMenu> PassOrders();*/
+
+
+        void FilterOrders(string line);
+        int Converttoint(string input);
+        vector<NewMenuTopping> PassRecords();
+        string Converttostring(int input);
+        void ReadFile();
 
     protected:
     private:
-     //   vector<DeleteMenu> _Orders;
-       // vector<DeleteMenu> _DoneOrders;
+       vector<NewMenuTopping> Orders;
 };
 
 #endif // PIZZARESPOSITORY_H

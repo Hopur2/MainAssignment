@@ -14,6 +14,71 @@ PizzaRespository::~PizzaRespository()
 {
     //dtor
 }
+
+
+void PizzaRespository::ReadFile()
+{
+    string str;
+    ifstream fin;
+    fin.open("menu.txt");
+
+        if(fin.is_open())
+        {
+            while(!fin.eof())
+            {
+                getline(fin,str);
+                FilterOrders(str);
+            }
+        }
+        else
+        {
+            cout << "File note open" << endl;
+        }
+    fin.close();
+}
+
+void PizzaRespository::FilterOrders(string line)
+{
+    string order[4];
+    vector<string> toppings;
+
+    int counter = 0;
+    for(unsigned int i = 0; i < line.size(); i++)
+    {
+        if(line[i] == '|')
+        {
+            counter++;
+        }
+        else
+        {
+            order[counter] += line[i];
+        }
+    }
+    toppings.push_back(order[0]);
+    //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
+    NewMenuTopping ord(Converttoint(order[0]), Converttoint(order[1]), order[2], Converttoint(order[3]));
+
+    Orders.push_back(ord);
+}
+
+vector<NewMenuTopping> PizzaRespository::PassRecords()
+{
+    return Orders;
+}
+
+int PizzaRespository::Converttoint(string input)
+{
+    stringstream ss;
+    int out = 0;
+    ss << input;
+    ss >> out;
+
+    return out;
+
+}
+
+
+
 void PizzaRespository::storeNewStuff(const NewStuff& newstuff)
 {
     ofstream fout;
@@ -133,60 +198,9 @@ void PizzaRespository::GetLocation()
     fin.close();
   }
 
-/*
-void PizzaRespository::ReadFile()
-{
-    string line;
-    ifstream fin;
-    fin.open("menu.txt");
-    if(fin.is_open())
-    {
-        while(!fin.eof())
-        {
-           getline(fin, line);
-           FilterFile(line);
-        }
-    }
-    else
-    {
-        cout << "File could not be opened" << endl;
-    }
-}
-
-
-void PizzaRespository::FilterFile(string lineorder)
-{
-    string filter[3];
-    int counter = 0;
-    for(unsigned int i = 0; i < lineorder.size(); i++)
-    {
-        if(lineorder[i] == '|')
-        {
-            counter++;
-        }
-        else
-        {
-            filter[counter] += lineorder[i];
-        }
-    }
-//    DeleteMenu deletemenu((filter[0]), (filter[1]), Convertoint(filter[2]));
-//    _Orders.push_back(DeleteMenu);
-}
-
-vector<DeleteMenu> PizzaRespository::PassOrders() {
-    return _Orders;
-}
 
 
 
 
 
-int PizzaRespository::Convertoint(string toconvert)
-{
-    stringstream ss;
-    int temp = 0;
-    ss << toconvert;
-    ss >> temp;
 
-    return temp;
-}*/

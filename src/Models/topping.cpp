@@ -7,10 +7,11 @@ Topping::Topping()
 }
 
 
-Topping::Topping(int id, char *name, int price)
+Topping::Topping(int id, char name, int price)
 {
     _id = id;
-    strcpy(_name, name);
+    _name[32] = name;
+//    strcpy(_name, name);
     _price = price;
 }
 
@@ -30,7 +31,7 @@ istream& operator >>(istream& in, Topping& topping)
 ostream& operator <<(ostream& out, const Topping& topping)
 {
 
-    out << topping._id << "|" << topping._name << "|" << topping._price;
+    out << topping._id << "|" << topping._name << "|" << topping._price << "|";
 
 
     return out;
