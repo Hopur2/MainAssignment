@@ -1,7 +1,6 @@
 #ifndef ORDERREPOSITORY_H
 #define ORDERREPOSITORY_H
-//#include "Services/CreatePizza.h"
-#include "CreateOrder.h"
+#include "Services/CreatePizza.h"
 #include <fstream>
 #include <vector>
 #include <iostream>
@@ -11,15 +10,15 @@ class OrderRepository
 {
     public:
         OrderRepository();
-        void storePizza(const CreateOrder& pizza);
+        void storePizza(const CreatePizza& pizza);
         void FilterOrders(string line);
         int Converttoint(string input);
-        vector<CreateOrder> PassRecords();
+        vector<CreatePizza> PassRecords();
         string Converttostring(int input);
         void ReadFile();
 
     private:
-        vector<CreateOrder> Orders;
+        vector<CreatePizza> Orders;
 };
 
 #endif // ORDERREPOSITORY_H

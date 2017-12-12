@@ -9,8 +9,7 @@ void MakelineFileWorker::ReadFile(string file)
 {
     string line;
     ifstream fin;
-    //fin.open(thefile);
-    fin.open("temp.txt");
+    fin.open(file);
     if(fin.is_open())
     {
         while(!fin.eof())
@@ -52,8 +51,7 @@ vector<Order> MakelineFileWorker::PassOrders() {
 void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders)
 {
     ofstream fout;
-    //fout.open(file1);
-    //fout.open("temp.txt");
+    fout.open(file1);
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < Orders.size(); i++)
@@ -67,8 +65,7 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
     {
         cout << "File couldn't be opened" << endl;
     }
-//    fout.open(file2, ios::app);
-    fout.open("temp.txt",ios::app);
+    fout.open(file2, ios::app);
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < DoneOrders.size(); i++)

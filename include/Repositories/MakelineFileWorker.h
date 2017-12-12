@@ -1,7 +1,6 @@
 #ifndef MAKELINEFILEWORKER_H
 #define MAKELINEFILEWORKER_H
 #include "Models/Order.h"
-#include <string>
 #include <fstream>
 #include <vector>
 #include <sstream>

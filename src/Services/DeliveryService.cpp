@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-//#include "DeliveryService.h"
-#include "Services/DeliveryService.h"
-=======
 #include "Services/DeliveryService.h"
 
->>>>>>> 8c0d681f73453bdc3a54a2b07343a784cf424009
 DeliveryService::DeliveryService()
 {
     //ctor

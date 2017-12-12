@@ -1,9 +1,13 @@
 #ifndef SALES_H
 #define SALES_H
-
+#include <iostream>
 #include "UI/Menu.h"
-#include "Models/CreateOrder.h"
 #include "Services/CreatePizza.h"
+#include "Repositories/OrderRepository.h"
+
+
+
+using namespace std;
 
 class Sales
 {
@@ -13,11 +17,11 @@ class Sales
         void create_pizza();
         void read_order();
         vector<string> addTopping(vector<string>& toppings);
-        int getprice(char pizzaSize,vector<string> toppings);
+        getprice(char pizzaSize,vector<string> toppings);
         string Stores();
     private:
-        CreatePizza order_service;
-        OrderRepository order;
+        OrderRepository repo;
+        vector<CreatePizza> Orders;
 };
 
 #endif // SALES_H

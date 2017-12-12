@@ -6,10 +6,10 @@ OrderRepository::OrderRepository()
 }
 
 
-void OrderRepository::storePizza(const CreateOrder& pizza)
+void OrderRepository::storePizza(const CreatePizza& pizza)
 {
     ofstream fout;
-    fout.open("Orders.txt", ios::app);
+    fout.open("Temp.txt", ios::app);
 
     fout << pizza;
     fout << endl;
@@ -20,8 +20,10 @@ void OrderRepository::ReadFile()
 {
     string str;
     ifstream fin;
-    fin.open("Orders.txt");
+    fin.open("Temp.txt");
 
+    do
+    {
         if(fin.is_open())
         {
             while(!fin.eof())
@@ -34,13 +36,15 @@ void OrderRepository::ReadFile()
         {
             cout << "File note open" << endl;
         }
+    }
+    while (!fin.is_open());
     fin.close();
 }
 
 
 void OrderRepository::FilterOrders(string line)
 {
-    string order[9];
+    string order[8];
     vector<string> toppings;
 
     int counter = 0;
@@ -56,12 +60,12 @@ void OrderRepository::FilterOrders(string line)
         }
     }
     toppings.push_back(order[0]);
-    CreateOrder ord(toppings, order[1][0], order[2], order[3], order[4][0],order[5],Converttoint(order[6]),order[7],order[8][0]);
+    CreatePizza ord(toppings, order[1][0], order[2], Converttoint(order[3]), order[4][0],order[5],Converttoint(order[6]),order[7],order[8][0]);
 
     Orders.push_back(ord);
 }
 
-vector<CreateOrder> OrderRepository::PassRecords()
+vector<CreatePizza> OrderRepository::PassRecords()
 {
     return Orders;
 }
