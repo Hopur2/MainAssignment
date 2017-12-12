@@ -13,6 +13,7 @@ class PizzaUI
         void startUI();
         void delete_menu();
         void New_location();
+        void New_Stuff();
     protected:
     private:
         int admno;

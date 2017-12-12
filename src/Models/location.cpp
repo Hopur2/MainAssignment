@@ -33,7 +33,7 @@ istream& operator >>(istream& in, Location& location)
 ostream& operator <<(ostream& out, const Location& location)
 {
 
-    out << location.name << "|" << location.locat;
+    out << location.name << "|" << location.locat << "|";
 
 
     return out;

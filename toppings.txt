@@ -1,0 +1,16 @@
+1|1|pepp|400
+2|skinka|500
+3|hakk|123
+4|beikon|5000
+1|9|abc|234
+1|3|jk|43
+4|kl|65
+5|kljlkj|65
+8|pep|324
+9|skink|32
+10|abc|234
+90|pepp|344|
+91|svep|3223|
+98|kjkl|32|
+97|jioj|32|
+96|kjhkh|34|

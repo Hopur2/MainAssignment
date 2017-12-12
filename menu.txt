@@ -1,0 +1,13 @@
+6|pepperoni|skinka|500
+
+99|pizza|topping1|topping2|topping3|topping4|34
+
+8|piz|dsf|324
+
+22|wds|efew,23
+
+12|p|topping5|22
+
+233|ppp|dsf,sdf,ge|322
+
+123123|lll|toping1,topping2,topping3,topping4|9000|

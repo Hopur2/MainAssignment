@@ -23,7 +23,6 @@ class Pizza
     protected:
     private:
         Topping *toppings;
-        int _id;
         int toppingCount;
         int currentToppingNum;
 };
