@@ -11,3 +11,5 @@
 6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Preparation|0|
 6604068|1|1|L|ham,pepperoni|yes|2400|Preparation|n|
 6604068|1|1|L|mushroom|yes|2200|Preparation|n|
+5854321|1|1|L|ham,mushroom|Hello guys|2400|Preparation|n|
+5854321|1|1|L|mushroom,pepperoni|Hello guys|2400|Preparation|n|
