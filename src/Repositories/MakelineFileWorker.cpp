@@ -5,11 +5,11 @@ MakelineFileWorker::MakelineFileWorker()
     //ctor
 }
 
-void MakelineFileWorker::ReadFile(string file)
+void MakelineFileWorker::ReadFile(string thefile)
 {
     string line;
     ifstream fin;
-    fin.open(file);
+    fin.open("Orders.txt");
     if(fin.is_open())
     {
         while(!fin.eof())
@@ -51,7 +51,7 @@ vector<Order> MakelineFileWorker::PassOrders() {
 void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders)
 {
     ofstream fout;
-    fout.open(file1);
+    fout.open("Orders.txt");
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < Orders.size(); i++)
@@ -65,7 +65,7 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
     {
         cout << "File couldn't be opened" << endl;
     }
-    fout.open(file2, ios::app);
+    fout.open("DoneOrders.txt", ios::app);
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < DoneOrders.size(); i++)

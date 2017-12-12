@@ -24,7 +24,8 @@ char choice;
         cout << "4: Read menu" << endl;
         cout << "5: Delete from menu" << endl;
         cout << "6: New location" << endl;
-        cout << "7: Go to main menu" << endl;
+        cout << "7: New stuff" << endl;
+        cout << "8: Go to main menu" << endl;
     cin >> choice;
     switch(choice)
     {
@@ -53,6 +54,10 @@ char choice;
            startUI();
             break;
             case '7':
+           New_Stuff();
+           startUI();
+            break;
+            case '8':
            Menu();
             break;
         default:
@@ -164,7 +169,7 @@ void PizzaUI::create_topping()
 
         for(int i = 0; i < topCnt; i++)
         {
-            cout << "Name and price: ";
+            cout << "id, name and price: ";
             Topping topping;
             cin >> topping;
             pizza.addTopping(topping);
@@ -172,6 +177,26 @@ void PizzaUI::create_topping()
         cout << pizza;
         PizzaRespository repo;
         repo.storeTopping(pizza);
+        cout << endl;
+}
+void PizzaUI::New_Stuff()
+{
+     int topCnt;
+        cout << "How many new stuff: ";
+        cin >> topCnt;
+
+        NewStuff newstuff(topCnt);
+
+        for(int i = 0; i < topCnt; i++)
+        {
+            cout << "id, name and price: ";
+            Topping topping;
+            cin >> topping;
+            newstuff.addTopping(topping);
+        }
+        cout << newstuff;
+        PizzaRespository repo;
+        repo.storeNewStuff(newstuff);
         cout << endl;
 }
 void PizzaUI::readTopp()

@@ -4,6 +4,7 @@
 
 //#include "Models/deletemenu.h"
 #include "Models/pizza.h"
+#include "Models/newstuff.h"
 #include "Services/newmenutopping.h"
 #include "Services/newlocation.h"
 
@@ -18,6 +19,7 @@ class PizzaRespository
         virtual ~PizzaRespository();
 
         void storeTopping(const Pizza& pizza);
+        void storeNewStuff(const NewStuff& newstuff);
         void retrieveTopping();
         void retrievePizza();
         void GetLocation();

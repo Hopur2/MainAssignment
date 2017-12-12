@@ -7,7 +7,7 @@ class Topping
 {
     public:
         Topping();
-        Topping(char *name, int price);
+        Topping(int id, char *name, int price);
         virtual ~Topping();
 
         friend istream& operator >>(istream& in, Topping& topping);
@@ -16,7 +16,7 @@ class Topping
 
     protected:
     private:
-
+        int _id;
         char _name[32];
         int _price;
 

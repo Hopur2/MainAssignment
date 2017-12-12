@@ -14,6 +14,16 @@ PizzaRespository::~PizzaRespository()
 {
     //dtor
 }
+void PizzaRespository::storeNewStuff(const NewStuff& newstuff)
+{
+    ofstream fout;
+
+    fout.open("stuff.txt", ios::app);
+
+    fout << newstuff;
+
+    fout.close();
+}
 void PizzaRespository::storeTopping(const Pizza& pizza)
 {
     ofstream fout;
