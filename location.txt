@@ -1,7 +1,0 @@
-Flatahraun|Hafnarfjordur
-Fjardargata|hafnarfjordur
-nybilavegur|kopavogur
-1|gata|stadur
-2|ewr|werwer
-9|4|dsklfklj|salkdjsd
-90|new|place|

@@ -77,11 +77,3 @@ int OrderRepository::Converttoint(string input)
 }
 
 
-string OrderRepository::Converttostring(int input)
-{
-    stringstream ss;
-    ss << input;
-    string str = ss.str();
-    return str;
-}
-

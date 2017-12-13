@@ -15,6 +15,7 @@ class NewMenuTopping
 
         int getID();
         int getPrice();
+        string getName();
         void initialize(int numberOfToppings);
         void clean();
 

@@ -9,11 +9,16 @@ class CreatePizza
     public:
 
         CreatePizza();
-        void get_Order_Price(string id);
+        int get_Order_Price(string id);
         void add_pizza_to_order(const CreateOrder& order1);
+        string get_toppings(int id);
+        int getMenuPrice(int id,char Size);
+        void ReadMenu();
 
     private:
         vector<CreateOrder> Orders;
+        vector<NewMenuTopping> menu;
+
         OrderRepository repo;
         PizzaRespository pizza_repo;
 

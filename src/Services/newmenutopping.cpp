@@ -99,3 +99,8 @@ int NewMenuTopping::getPrice()
     return _price;
 }
 
+string NewMenuTopping::getName()
+{
+    return _name;
+}
+
