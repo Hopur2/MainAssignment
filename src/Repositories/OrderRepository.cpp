@@ -30,10 +30,6 @@ void OrderRepository::ReadFile()
                 FilterOrders(str);
             }
         }
-        else
-        {
-            cout << "File note open" << endl;
-        }
     fin.close();
 }
 

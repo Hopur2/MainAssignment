@@ -34,23 +34,23 @@ string CreateOrder::get_id()
     return _ID;
 }
 
-ostream& operator <<(ostream& out, const CreateOrder& pizza)
+ostream& operator <<(ostream& out, const CreateOrder& createOrder)
 {
-    out << pizza._ID <<"|" << pizza._delivery <<"|" << pizza._place <<"|";
-    out << pizza._pizzaSize<< "|";
+    out << createOrder._ID <<"|" << createOrder._delivery <<"|" << createOrder._place <<"|";
+    out << createOrder._pizzaSize<< "|";
 
 
-    for(unsigned int i = 0; i < pizza.size();i++)
+    for(unsigned int i = 0; i < createOrder.size();i++)
     {
-        out << pizza.at(i);
-        if(i!= pizza.size()-1)
+        out << createOrder.at(i);
+        if(i!= createOrder.size()-1)
         {
             out << ",";
         }
     }
     out << "|";
-    out << pizza._comments<< "|";
-    out << pizza._price <<"|"<< pizza._status<<"|"<<pizza._paid<<"|";
+    out << createOrder._comments<< "|";
+    out << createOrder._price <<"|"<< createOrder._status<<"|"<<createOrder._paid<<"|";
     //out << endl;
 
     return out;
