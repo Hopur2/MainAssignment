@@ -62,8 +62,14 @@ ostream& operator << (ostream& out, const Order& order)
     }
     else if(order._verbose == 2)
     {
+        unsigned int spaces = 50;
+        spaces -= order._toppings.size();
         out << "Size: " << order._size << " ";
-        out << "Toppings: " << order._toppings << "\t\t\t";
+        out << "Toppings: " << order._toppings;
+        for(unsigned int i = 0; i < spaces; i++)
+        {
+            out << " ";
+        }
         out << "Status: " << order._status << " ";
         out << "Prize: " << order._prize << endl;
     }

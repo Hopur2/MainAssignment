@@ -3,4 +3,8 @@
 3|Nafn3|toping1,topping2,topping3,topping4|300|
 4|Nafn4|toping1,topping2,topping3,topping4|400|
 5|Nafn5|toping1,topping2,topping3,topping4|500|
+<<<<<<< HEAD
 100|Pizzanafn|pepp,hakk,beikon|1590|
+=======
+100|Pizzanafn|pepp,hakk,beikon|1590|
+>>>>>>> a22233ea9fb46d7a3eef66a3a156a9604cbc3375

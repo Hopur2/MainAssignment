@@ -5,8 +5,11 @@ CreatePizza::CreatePizza()
     Orders = repo.PassRecords();
     pizza_repo.ReadMenu();
     menu = pizza_repo.PassMenu();
+<<<<<<< HEAD
     //pizza_repo.ReadFile();
     //menu = pizza_repo.PassRecords();
+=======
+>>>>>>> a22233ea9fb46d7a3eef66a3a156a9604cbc3375
 }
 
 void CreatePizza::add_pizza_to_order(const CreateOrder& order1)

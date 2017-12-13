@@ -10,7 +10,6 @@ void MakelineFileWorker::ReadFile(string file)
     string line;
     ifstream fin;
     fin.open(file.c_str());
-    //fin.open("Orders.txt");
     if(fin.is_open())
     {
         while(!fin.eof())
