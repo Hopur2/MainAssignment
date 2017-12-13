@@ -58,12 +58,12 @@ void PizzaRespository::FilterOrders(string line)
     //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
     NewMenuTopping ord(Converttoint(order[0]), Converttoint(order[1]), order[2], Converttoint(order[3]));
 
-    Orders.push_back(ord);
+    menus.push_back(ord);
 }
 
 vector<NewMenuTopping> PizzaRespository::PassRecords()
 {
-    return Orders;
+    return menus;
 }
 
 int PizzaRespository::Converttoint(string input)
@@ -76,6 +76,46 @@ int PizzaRespository::Converttoint(string input)
     return out;
 
 }
+
+
+
+void PizzaRespository::FilterTopping(string line)
+{
+    string order[3];
+    vector<string> toppingss;
+
+    int counter = 0;
+    for(unsigned int i = 0; i < line.size(); i++)
+    {
+        if(line[i] == '|')
+        {
+            counter++;
+        }
+        else
+        {
+            order[counter] += line[i];
+        }
+    }
+    toppingss.push_back(order[0]);
+    //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
+    Topping ord(Converttoint(order[0]), order[1], Converttoint(order[2]));
+
+    toppings.push_back(ord);
+}
+
+vector<Topping> PizzaRespository::PassTopping()
+{
+    return toppings;
+}
+
+
+
+
+
+
+
+
+
 
 
 
