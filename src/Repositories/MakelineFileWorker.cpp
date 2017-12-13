@@ -5,26 +5,26 @@ MakelineFileWorker::MakelineFileWorker()
     //ctor
 }
 
-void MakelineFileWorker::ReadFile(string thefile)
+void MakelineFileWorker::ReadFile(string file)
 {
     string line;
     ifstream fin;
-    //fin.open(file);
-
-    fin.open("Orders.txt");
+    fin.open(file.c_str());
+    //fin.open("Orders.txt");
     if(fin.is_open())
     {
         while(!fin.eof())
         {
-           getline(fin, line);
-           FilterFile(line);
+            getline(fin, line);
+            FilterFile(line);
         }
-        fin.close();
     }
     else
     {
         cout << "File could not be opened" << endl;
     }
+    fin.close();
+
 }
 
 void MakelineFileWorker::FilterFile(string lineorder)
@@ -53,15 +53,14 @@ vector<Order> MakelineFileWorker::PassOrders() {
 void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders)
 {
     ofstream fout;
-    //fout.open(file1);
-
-    fout.open("Orders.txt");
+    fout.open(file1.c_str());
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < Orders.size(); i++)
         {
-            Orders[i].SetVerbose(false);
+            Orders[i].SetVerbose(3);
             fout << Orders[i];
+            Orders[i].SetVerbose(1);
         }
         fout.close();
     }
@@ -69,17 +68,14 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
     {
         cout << "File couldn't be opened" << endl;
     }
-    fout.open("DoneOrders.txt", ios::app);
-
-    //fout.open(file2, ios::app);
-    fout.open("Orders.txt",ios::app);
-
+    fout.open(file2.c_str(), ios::app);
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < DoneOrders.size(); i++)
         {
-            DoneOrders[i].SetVerbose(false);
+            DoneOrders[i].SetVerbose(3);
             fout << DoneOrders[i];
+            DoneOrders[i].SetVerbose(1);
         }
         fout.close();
     }

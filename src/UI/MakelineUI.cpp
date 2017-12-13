@@ -8,26 +8,26 @@ MakelineUI::MakelineUI()
 void MakelineUI::MainMenu()
 {
     PickStore();
-    char input;
+    string input;
     bool showdone = false;
     while(true) {
         if(showdone)
         {
             cout << "Showing Done Orders ---- press r to return and q to quit" << endl;
-            MS.PrintDoneOrders();
+            PrintDoneOrders();
         }
         else
         {
             cout << "Showing Orders to do ---- press r to show done orders and q to quit" << endl;
-            MS.PrintOrders();
+            PrintOrders();
         }
         cout << "What Order have you done?" << endl;
         cin >> input;
-        if(input == 'r')
+        if(input == "r")
         {
             showdone = !showdone;
         }
-        else if(input == 'q')
+        else if(input == "q")
         {
             MS.Finished();
             cout << "Saved" << endl;
@@ -37,14 +37,42 @@ void MakelineUI::MainMenu()
         {
             try
             {
-                MS.DoneOrder(input);
+                DoneOrders(input);
             }
-            catch(char e)
+            catch(string e)
             {
-                cout << e << " isn't a valid order number" << endl;
+                cout << e << endl;
             }
         }
     }
+}
+
+void MakelineUI::PrintDoneOrders()
+{
+    orders = MS.PrintDoneOrders();
+    for(unsigned int i = 0; i < orders.size(); i++)
+    {
+        cout << i << " " << orders[i];
+    }
+}
+
+void MakelineUI::PrintOrders()
+{
+    orders = MS.PrintOrders();
+    for(unsigned int i = 0; i < orders.size(); i++)
+    {
+        cout << i << " " << orders[i];
+    }
+}
+
+void MakelineUI::DoneOrders(string input)
+{
+    int out = 0;
+    stringstream ss;
+    ss << input;
+    ss >> out;
+
+    MS.DoneOrder(orders[out]);
 }
 
 void MakelineUI::PickStore()

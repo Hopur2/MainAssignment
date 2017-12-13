@@ -1,4 +1,4 @@
-#include "newstuff.h"
+#include "Models/newstuff.h"
 
 NewStuff::NewStuff()
 {

@@ -16,7 +16,7 @@ class CreateOrder
         int get_price();
         string get_id();
 
-        friend ostream& operator <<(ostream& out, const CreateOrder& createpizza);
+        friend ostream& operator <<(ostream& out, const CreateOrder& createOrder);
 
     private:
         vector<string> _toppings;
