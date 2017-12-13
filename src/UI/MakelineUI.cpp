@@ -11,6 +11,7 @@ void MakelineUI::MainMenu()
     string input;
     bool showdone = false;
     while(true) {
+        system("cls");
         if(showdone)
         {
             cout << "=====================================================================================================" << endl;
@@ -86,6 +87,7 @@ void MakelineUI::PickStore()
     string store;
     while(store != "1" && store != "2" && store != "3")
     {
+        system("cls");
         cout << "===================================================" << endl;
         cout << "What store are you in?" << endl;
         cout << "---------------------------------------------------" << endl;
