@@ -3,14 +3,14 @@
 #include <fstream>
 //#include "Repositories/pizzarespository.h"
 #include "UI/menutopping.h"
-
+#include <vector>
 
 using namespace std;
 class NewMenuTopping
 {
     public:
         NewMenuTopping();
-        NewMenuTopping(int id, int numberOfToppings, string name,int price);
+        NewMenuTopping(int id,  string name, vector<string> topping, int price);
         virtual ~NewMenuTopping();
 
         int getID();
@@ -27,6 +27,7 @@ class NewMenuTopping
 
     protected:
     private:
+        vector<string> _topping;
         MenuTopping *menutoppings;
         int toppingCount;
         string _name;

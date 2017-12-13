@@ -98,7 +98,8 @@ void PizzaUI::create_menu()
         int topCnt;
         string name;
         int price;
-
+        string input;
+        vector<string> topping;
         cout << "Id: ";
         cin >> id;
         cout << "Name: ";
@@ -110,17 +111,16 @@ void PizzaUI::create_menu()
         cout << "Price: ";
         cin >> price;
 
-    NewMenuTopping menupizza(id, topCnt, name, price);
+
 
     for(int i = 0; i < topCnt; i++)
     {
         cout << "Topping " << i + 1 << ": ";
-        MenuTopping topping;
-        cin >> topping;
-       menupizza.menuaddTopping(topping);
+        cin >> input;
+        topping.push_back(input);
 
     }
-
+ NewMenuTopping menupizza(id, name, topping, price);
     cout << menupizza;
 
         PizzaRespository repo;
@@ -161,19 +161,21 @@ void PizzaUI::create_topping()
      int topCnt;
         cout << "How many toppings: ";
         cin >> topCnt;
-
-        Pizza pizza(topCnt);
-
+        int id;
+        string name;
+        int price;
         for(int i = 0; i < topCnt; i++)
         {
-            cout << "id, name and price: ";
-            Topping topping;
-            cin >> topping;
-            pizza.addTopping(topping);
+            cout << "Id: ";
+            cin >> id;
+            cout << "Name: ";
+            cin >> name;
+            cout << "Price: ";
+            cin >> price;
+            Topping topping(id,name,price);
+            PizzaRespository repo;
+            repo.storeTopping(topping);
         }
-        cout << pizza;
-        PizzaRespository repo;
-        repo.storeTopping(pizza);
         cout << endl;
 }
 void PizzaUI::New_Stuff()
@@ -181,19 +183,21 @@ void PizzaUI::New_Stuff()
      int topCnt;
         cout << "How many new stuff: ";
         cin >> topCnt;
-
-        NewStuff newstuff(topCnt);
-
+        int id;
+        string name;
+        int price;
         for(int i = 0; i < topCnt; i++)
         {
-            cout << "id, name and price: ";
-            Topping topping;
-            cin >> topping;
-            newstuff.addTopping(topping);
+            cout << "Id: ";
+            cin >> id;
+            cout << "Name: ";
+            cin >> name;
+            cout << "Price: ";
+            cin >> price;
+            Topping topping(id,name,price);
+            PizzaRespository repo;
+            repo.storeNewStuff(topping);
         }
-        cout << newstuff;
-        PizzaRespository repo;
-        repo.storeNewStuff(newstuff);
         cout << endl;
 }
 void PizzaUI::readTopp()

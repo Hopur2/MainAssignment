@@ -16,7 +16,7 @@ PizzaRespository::~PizzaRespository()
 }
 
 
-void PizzaRespository::ReadFile()
+void PizzaRespository::ReadMenu()
 {
     string str;
     ifstream fin;
@@ -27,7 +27,7 @@ void PizzaRespository::ReadFile()
             while(!fin.eof())
             {
                 getline(fin,str);
-                FilterOrders(str);
+                FilterMenu(str);
             }
         }
         else
@@ -37,10 +37,10 @@ void PizzaRespository::ReadFile()
     fin.close();
 }
 
-void PizzaRespository::FilterOrders(string line)
+void PizzaRespository::FilterMenu(string line)
 {
     string order[4];
-    vector<string> toppings;
+    vector<string> topping;
 
     int counter = 0;
     for(unsigned int i = 0; i < line.size(); i++)
@@ -54,16 +54,16 @@ void PizzaRespository::FilterOrders(string line)
             order[counter] += line[i];
         }
     }
-    toppings.push_back(order[0]);
+    topping.push_back(order[2]);
     //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
-    NewMenuTopping ord(Converttoint(order[0]), Converttoint(order[1]), order[2], Converttoint(order[3]));
+    NewMenuTopping ord(Converttoint(order[0]), order[1], topping, Converttoint(order[3]));
 
-    menus.push_back(ord);
+    menu.push_back(ord);
 }
 
-vector<NewMenuTopping> PizzaRespository::PassRecords()
+vector<NewMenuTopping> PizzaRespository::PassMenu()
 {
-    return menus;
+    return menu;
 }
 
 int PizzaRespository::Converttoint(string input)
@@ -77,12 +77,32 @@ int PizzaRespository::Converttoint(string input)
 
 }
 
+void PizzaRespository::ReadTopping()
+{
+    string str;
+    ifstream fin;
+    fin.open("toppings.txt");
+
+        if(fin.is_open())
+        {
+            while(!fin.eof())
+            {
+                getline(fin,str);
+                FilterTopping(str);
+            }
+        }
+        else
+        {
+            cout << "File note open" << endl;
+        }
+    fin.close();
+}
 
 
 void PizzaRespository::FilterTopping(string line)
 {
     string order[3];
-    vector<string> toppingss;
+
 
     int counter = 0;
     for(unsigned int i = 0; i < line.size(); i++)
@@ -96,8 +116,8 @@ void PizzaRespository::FilterTopping(string line)
             order[counter] += line[i];
         }
     }
-    toppingss.push_back(order[0]);
-    //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
+
+
     Topping ord(Converttoint(order[0]), order[1], Converttoint(order[2]));
 
     toppings.push_back(ord);
@@ -109,6 +129,51 @@ vector<Topping> PizzaRespository::PassTopping()
 }
 
 
+void PizzaRespository::ReadSides()
+{
+    string str;
+    ifstream fin;
+    fin.open("stuff.txt");
+
+        if(fin.is_open())
+        {
+            while(!fin.eof())
+            {
+                getline(fin,str);
+                FilterTopping(str);
+            }
+        }
+        else
+        {
+            cout << "File note open" << endl;
+        }
+    fin.close();
+}
+
+
+void PizzaRespository::FilterSides(string line)
+{
+    string order[3];
+
+
+    int counter = 0;
+    for(unsigned int i = 0; i < line.size(); i++)
+    {
+        if(line[i] == '|')
+        {
+            counter++;
+        }
+        else
+        {
+            order[counter] += line[i];
+        }
+    }
+
+
+    Topping ord(Converttoint(order[0]), order[1], Converttoint(order[2]));
+
+    toppings.push_back(ord);
+}
 
 
 
@@ -119,17 +184,20 @@ vector<Topping> PizzaRespository::PassTopping()
 
 
 
-void PizzaRespository::storeNewStuff(const NewStuff& newstuff)
+
+
+
+void PizzaRespository::storeNewStuff(const Topping& topping)
 {
     ofstream fout;
 
     fout.open("stuff.txt", ios::app);
 
-    fout << newstuff;
+    fout << topping;
 
     fout.close();
 }
-void PizzaRespository::storeTopping(const Pizza& pizza)
+void PizzaRespository::storeTopping(const Topping& pizza)
 {
     ofstream fout;
 
@@ -166,13 +234,9 @@ void PizzaRespository::retrieveTopping()
 }
 void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
  {
-
-     ofstream fout;
-
+    ofstream fout;
     fout.open("menu.txt", ios::app);
-
     fout << newmenutopping;
-
     fout.close();
  }
 
