@@ -8,8 +8,11 @@ class DeliveryService
     public:
         DeliveryService();
         void GetOrders();
-        void PrintOrders();
+        vector<Order> FindOrder(string ssn);
+        void SetStore(string store);
+        int ConvertToInt(string in);
     private:
+        string _store;
         vector<Order> theorders;
         MakelineFileWorker FW;
 };

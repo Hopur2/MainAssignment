@@ -9,9 +9,13 @@ class Order
 {
     public:
         Order(int ID, int Deliver, string Location, char Size, string Toppings, string Comment, int Prize, string Status, int Payed);
-        void SetVerbose(bool b);
-        void SetStatus(string s);
+        int GetID();
+        int GetPrize();
+        int GetPayed();
+        string GetToppings();
         string GetLocation();
+        void SetVerbose(int b);
+        void SetStatus(string s);
         friend ostream& operator << (ostream& out, const Order& order);
     private:
         int _ID;
@@ -23,7 +27,7 @@ class Order
         int _prize;
         string _status;
         int _payed;
-        bool _verbose;
+        int _verbose;
 };
 
 #endif // ORDER_H

@@ -1,13 +1,4 @@
-6604068|1|1|L|ham|I Like It HAWT|2200|Preparation|0|
-6604068|1|1|M|ham,ham,pepperoni,mushroom|I Like It HAWT|2500|Preparation|0|
-1234567|1|1|L|ham,pepperoni|Rawr|2400|Preparation|0|
-1234567|1|1|L|pepperoni,mushroom|Rawr|2400|Preparation|0|
-6604068|1|1|L|ham,pepperoni|Gimme Hot PIZZA|2400|Preparation|0|
-6604068|1|1|L|mushroom,pepperoni|Gimme Hot PIZZA|2400|Preparation|0|
-7654321|0|Your Moms|L|ham,mushroom|Hello|2400|Preparation|0|
-7654321|0|Your Moms|L|mushroom,pepperoni|Hello|2400|Preparation|0|
-5674321|1|1|M|ham,mushroom|no|2100|Preparation|0|
-6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Preparation|0|
-6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Preparation|0|
-6604068|1|1|L|ham,pepperoni|yes|2400|Preparation|n|
-6604068|1|1|L|mushroom|yes|2200|Preparation|n|
+7654321|0|Your Moms|l|ham,mushroom|Hello|2400|Preparation|0|
+7654321|0|Your Moms|l|mushroom,pepperoni|Hello|2400|Preparation|0|
+7774757|1|2|l|ham|vesen|2200|Preparation|0|
+7774757|1|2|l|ham|vesen|2200|Preparation|0|

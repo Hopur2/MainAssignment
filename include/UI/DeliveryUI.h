@@ -9,8 +9,11 @@ class DeliveryUI
     public:
         DeliveryUI();
         void MainMenu();
+        void PrintOrder(string ssn);
+        void PickStore();
     private:
         DeliveryService DS;
+        vector<Order> order;
 };
 
 #endif // DELIVERYUI_H

@@ -3,6 +3,7 @@
 DeliveryService::DeliveryService()
 {
     //ctor
+
     GetOrders();
 }
 
@@ -12,11 +13,31 @@ void DeliveryService::GetOrders()
     theorders = FW.PassOrders();
 }
 
-void DeliveryService::PrintOrders()
+vector<Order> DeliveryService::FindOrder(string ssn)
 {
-    cout << theorders.size() << endl;
+    vector<Order> foundorder;
+    int tempid = ConvertToInt(ssn);
     for(unsigned int i = 0; i < theorders.size(); i++)
     {
-        cout << theorders[i];
+        if(theorders[i].GetID() == tempid)
+        {
+            foundorder.push_back(theorders[i]);
+        }
     }
+    return foundorder;
+}
+
+void DeliveryService::SetStore(string store)
+{
+    _store = store;
+}
+
+int DeliveryService::ConvertToInt(string in)
+{
+    int out = 0;
+    stringstream ss;
+    ss << in;
+    ss >> out;
+
+    return out;
 }

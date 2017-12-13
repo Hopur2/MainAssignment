@@ -14,34 +14,47 @@ void MakelineServices::GetOrders()
     fw.ReadFile("Orders.txt");
     theorders = fw.PassOrders();
 }
-void MakelineServices::PrintOrders()
+vector<Order> MakelineServices::PrintOrders()
 {
+    vector<Order> orders;
     for(unsigned int i = 0; i < theorders.size(); i++)
     {
         if(_store == theorders[i].GetLocation())
         {
-            cout << i << " " << theorders[i];
+            orders.push_back(theorders[i]);
         }
     }
+
+    return orders;
 }
-void MakelineServices::PrintDoneOrders()
+vector<Order> MakelineServices::PrintDoneOrders()
 {
-    for(unsigned int i = 0; i < ordersdone.size(); i++)
-    {
-        cout << i << " " << ordersdone[i];
-    }
+    return ordersdone;
 }
 
-void MakelineServices::DoneOrder(char input)
+void MakelineServices::DoneOrder(Order order)
 {
-    unsigned int temp = input - '0';
-    if(temp < 0 || temp > theorders.size())
+    int temp = 0;
+    bool found = 0;
+    for(unsigned int i = 0; i < theorders.size(); i++)
     {
-        throw input;
+        if(theorders[i].GetID() == order.GetID() && theorders[i].GetToppings() == order.GetToppings())
+        {
+            temp = i;
+            found = true;
+            break;
+        }
     }
-    theorders[temp].SetStatus("Ready");
-    ordersdone.push_back(theorders[temp]);
-    theorders.erase(theorders.begin()+temp);
+    if(found)
+    {
+        theorders[temp].SetStatus("Ready");
+        ordersdone.push_back(theorders[temp]);
+        theorders.erase(theorders.begin()+temp);
+    }
+    else
+    {
+        throw "Not Found";
+    }
 }
 void MakelineServices::Finished()
 {
