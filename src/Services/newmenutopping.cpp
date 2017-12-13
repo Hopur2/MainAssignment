@@ -6,21 +6,23 @@ NewMenuTopping::NewMenuTopping()
 {
 
 }
-NewMenuTopping::NewMenuTopping(int id, int numberOfToppings,string name, int price)
+NewMenuTopping::NewMenuTopping(int id,string name, vector<string> topping,int price)
 {
+    _topping = topping;
     _id = id;
     _name = name;
     _price = price;
-    toppingCount = numberOfToppings;
-    menutoppings = new MenuTopping[toppingCount];
-    currentToppingNum = 0;
+    //toppingCount = numberOfToppings;
+    //menutoppings = new MenuTopping[toppingCount];
+    //currentToppingNum = 0;
 
 }
 NewMenuTopping::~NewMenuTopping()
 {
-    clean();
+//    clean();
 
 }
+/*
 void NewMenuTopping::initialize(int numberOfToppings)
 {
     clean();
@@ -48,17 +50,17 @@ void NewMenuTopping::clean()
         currentToppingNum = 0;
     }
 
-}
+}*/
 istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 {
     int toppingCount = 0;
     in >> NewMenuTopping.toppingCount;
-    NewMenuTopping.initialize(toppingCount);
+//    NewMenuTopping.initialize(toppingCount);
     MenuTopping menutopping;
     for(int i = 0; i < NewMenuTopping.toppingCount; i++)
     {
         in >> menutopping;
-        NewMenuTopping.menuaddTopping(menutopping);
+//        NewMenuTopping.menuaddTopping(menutopping);
           //  in >> pizza.toppings[i];
     }
 
@@ -67,6 +69,28 @@ istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 
 ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
 {
+    out << pizza._id << "|" << pizza._name << "|";
+
+    for(unsigned int i = 0; i < pizza._topping.size();i++)
+    {
+        out << pizza._topping.at(i);
+        if(i != pizza._topping.size() - 1)
+        {
+            out << ",";
+        }
+    }
+    out << "|";
+    out << pizza._price << "|";
+
+    return out;
+
+
+
+
+
+
+
+    /*
     out << pizza._id << "|";
     out << pizza._name << "|";
 
@@ -86,14 +110,14 @@ ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
     out << pizza._price << "|" << endl;
 
 
-    return out;
+    return out;*/
 }
-
 
 int NewMenuTopping::getID()
 {
     return _id;
 }
+
 int NewMenuTopping::getPrice()
 {
     return _price;

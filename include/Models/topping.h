@@ -11,7 +11,8 @@ class Topping
         virtual ~Topping();
 
 
-
+        int getID();
+        int getPrice();
 
         friend istream& operator >>(istream& in, Topping& topping);
 
