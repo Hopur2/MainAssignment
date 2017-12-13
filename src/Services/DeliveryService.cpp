@@ -3,8 +3,6 @@
 DeliveryService::DeliveryService()
 {
     //ctor
-
-    GetOrders();
 }
 
 void DeliveryService::GetOrders()
@@ -30,6 +28,7 @@ vector<Order> DeliveryService::FindOrder(string ssn)
 void DeliveryService::SetStore(string store)
 {
     _store = store;
+    GetOrders();
 }
 
 int DeliveryService::ConvertToInt(string in)

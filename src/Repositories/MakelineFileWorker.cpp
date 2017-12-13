@@ -5,17 +5,11 @@ MakelineFileWorker::MakelineFileWorker()
     //ctor
 }
 
-void MakelineFileWorker::ReadFile(string thefile)
+void MakelineFileWorker::ReadFile(string file)
 {
     string line;
-<<<<<<< HEAD
-    fin.open(file);
-=======
     ifstream fin;
-    //fin.open(file);
-
-    fin.open("Orders.txt");
->>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175
+    fin.open(file);
     if(fin.is_open())
     {
         while(!fin.eof())
@@ -58,13 +52,7 @@ vector<Order> MakelineFileWorker::PassOrders() {
 void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders)
 {
     ofstream fout;
-<<<<<<< HEAD
     fout.open(file1);
-=======
-    //fout.open(file1);
-
-    fout.open("Orders.txt");
->>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < Orders.size(); i++)
@@ -79,15 +67,7 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
     {
         cout << "File couldn't be opened" << endl;
     }
-<<<<<<< HEAD
     fout.open(file2, ios::app);
-=======
-    fout.open("DoneOrders.txt", ios::app);
-
-    //fout.open(file2, ios::app);
-    fout.open("Orders.txt",ios::app);
-
->>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < DoneOrders.size(); i++)

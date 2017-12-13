@@ -3,11 +3,11 @@
 MakelineServices::MakelineServices()
 {
     //ctor
-    GetOrders();
 }
 void MakelineServices::SetStore(string store)
 {
     _store = store;
+    GetOrders();
 }
 void MakelineServices::GetOrders()
 {

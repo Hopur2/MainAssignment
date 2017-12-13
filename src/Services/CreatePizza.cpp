@@ -3,7 +3,7 @@ CreatePizza::CreatePizza()
 {
     repo.ReadFile();
     Orders = repo.PassRecords();
-    pizza_repo.ReadFile();
+    //pizza_repo.ReadFile();
     //menu = pizza_repo.PassRecords();
 }
 
