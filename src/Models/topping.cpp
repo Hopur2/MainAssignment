@@ -7,10 +7,10 @@ Topping::Topping()
 }
 
 
-Topping::Topping(int id, char name, int price)
+Topping::Topping(int id, string name, int price)
 {
     _id = id;
-    _name[32] = name;
+    _name = name;
 //    strcpy(_name, name);
     _price = price;
 }

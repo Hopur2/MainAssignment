@@ -7,7 +7,7 @@ class Topping
 {
     public:
         Topping();
-        Topping(int id, char name, int price);
+        Topping(int id, string name, int price);
         virtual ~Topping();
 
 
@@ -20,7 +20,7 @@ class Topping
     protected:
     private:
         int _id;
-        char _name[32];
+        string _name;
         int _price;
 
 };

@@ -141,9 +141,6 @@ void PizzaUI::delete_menu()
                 cout << "Type in pizza you want to remove: ";
                 cin >> deleteline;
 
-
-
-
                while (getline(fin,line))
 {
 
