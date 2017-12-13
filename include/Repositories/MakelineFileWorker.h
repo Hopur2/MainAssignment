@@ -17,6 +17,7 @@ class MakelineFileWorker
         void WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders);
         vector<Order> PassOrders();
    private:
+        ifstream fin;
         vector<Order> _Orders;
         vector<Order> _DoneOrders;
 };

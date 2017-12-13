@@ -9,9 +9,9 @@ class MakelineServices
         MakelineServices();
         void SetStore(string store);
         void GetOrders();
-        void PrintOrders();
-        void PrintDoneOrders();
-        void DoneOrder(char input);
+        vector<Order> PrintOrders();
+        vector<Order> PrintDoneOrders();
+        void DoneOrder(Order order);
         void Finished();
     private:
         vector<Order> theorders;

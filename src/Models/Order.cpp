@@ -12,7 +12,22 @@ Order::Order(int ID, int Deliver, string Location, char Size, string Toppings, s
     _prize = Prize;
     _status = Status;
     _payed = Payed;
-    _verbose = true;
+    _verbose = 1;
+}
+
+int Order::GetID()
+{
+    return _ID;
+}
+
+int Order::GetPrize()
+{
+    return _prize;
+}
+
+int Order::GetPayed()
+{
+    return _payed;
 }
 
 string Order::GetLocation()
@@ -20,7 +35,12 @@ string Order::GetLocation()
     return _location;
 }
 
-void Order::SetVerbose(bool b)
+string Order::GetToppings()
+{
+    return _toppings;
+}
+
+void Order::SetVerbose(int b)
 {
     _verbose = b;
 }
@@ -32,13 +52,20 @@ void Order::SetStatus(string s)
 
 ostream& operator << (ostream& out, const Order& order)
 {
-    if(order._verbose)
+    if(order._verbose == 1)
     {
         out << "ID: " << order._ID << " ";
         out << "Size: " << order._size << " ";
         out << "Toppings: " << order._toppings << " ";
         out << "Comment: " << order._comment << " ";
         out << "Status: " << order._status << endl;
+    }
+    else if(order._verbose == 2)
+    {
+        out << "Size: " << order._size << " ";
+        out << "Toppings: " << order._toppings << "\t\t\t";
+        out << "Status: " << order._status << " ";
+        out << "Prize: " << order._prize << endl;
     }
     else
     {
