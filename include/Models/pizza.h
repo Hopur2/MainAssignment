@@ -1,7 +1,7 @@
 #ifndef PIZZA_H
 #define PIZZA_H
 #include <fstream>
-#include "topping.h"
+#include "Models/topping.h"
 
 using namespace std;
 class Pizza
@@ -23,7 +23,6 @@ class Pizza
     protected:
     private:
         Topping *toppings;
-        int _id;
         int toppingCount;
         int currentToppingNum;
 };

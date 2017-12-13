@@ -53,14 +53,12 @@ istream& operator >>(istream& in, Pizza& pizza)
     for(int i = 0; i < pizza.toppingCount; i++)
     {
         in >> topping;
-//        pizza.addTopping(topping);
     }
     return in;
 }
 
 ostream& operator <<(ostream& out, const Pizza& pizza)
 {
-    out << pizza._id << "|";
     for(int i = 0; i < pizza.toppingCount; i++)
     {
         out << pizza.toppings[i] << endl;

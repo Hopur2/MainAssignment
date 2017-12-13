@@ -8,28 +8,22 @@ MakelineFileWorker::MakelineFileWorker()
 void MakelineFileWorker::ReadFile(string thefile)
 {
     string line;
-<<<<<<< HEAD
-    fin.open(file);
-=======
     ifstream fin;
     //fin.open(file);
-
     fin.open("Orders.txt");
->>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175
     if(fin.is_open())
     {
         while(!fin.eof())
         {
-            getline(fin, line);
-            FilterFile(line);
+           getline(fin, line);
+           FilterFile(line);
         }
+        fin.close();
     }
     else
     {
         cout << "File could not be opened" << endl;
     }
-    fin.close();
-
 }
 
 void MakelineFileWorker::FilterFile(string lineorder)
@@ -58,20 +52,14 @@ vector<Order> MakelineFileWorker::PassOrders() {
 void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> Orders, vector<Order> DoneOrders)
 {
     ofstream fout;
-<<<<<<< HEAD
-    fout.open(file1);
-=======
     //fout.open(file1);
-
     fout.open("Orders.txt");
->>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < Orders.size(); i++)
         {
-            Orders[i].SetVerbose(3);
+            Orders[i].SetVerbose(false);
             fout << Orders[i];
-            Orders[i].SetVerbose(1);
         }
         fout.close();
     }
@@ -79,22 +67,15 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
     {
         cout << "File couldn't be opened" << endl;
     }
-<<<<<<< HEAD
-    fout.open(file2, ios::app);
-=======
     fout.open("DoneOrders.txt", ios::app);
-
     //fout.open(file2, ios::app);
     fout.open("Orders.txt",ios::app);
-
->>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175
     if(fout.is_open())
     {
         for(unsigned int i = 0; i < DoneOrders.size(); i++)
         {
-            DoneOrders[i].SetVerbose(3);
+            DoneOrders[i].SetVerbose(false);
             fout << DoneOrders[i];
-            DoneOrders[i].SetVerbose(1);
         }
         fout.close();
     }
@@ -113,4 +94,3 @@ int MakelineFileWorker::Convertoint(string toconvert)
 
     return temp;
 }
-

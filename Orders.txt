@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 7654321|0|Your Moms|l|ham,mushroom|Hello|2400|Preparation|0|
 7654321|0|Your Moms|l|mushroom,pepperoni|Hello|2400|Preparation|0|
 7774757|1|2|l|ham|vesen|2200|Preparation|0|
 7774757|1|2|l|ham|vesen|2200|Preparation|0|
+=======
+6604068|1|2|L|bacon,cheddarCheese,pepperoni|lolololol|3450|Preparation|y|
+6604068|1|2|M|bacon,cheddarCheese,pepperoni|lolololol|2932|Preparation|y|
+6604068|1|2|s|bacon,cheddarCheese,pepperoni|lolololol|2414|Preparation|y|
+>>>>>>> 533fe9bc4cd7fc463ccf90edf479089ed9e1f175

@@ -1,7 +1,9 @@
 #ifndef NEWMENUTOPPING_H
 #define NEWMENUTOPPING_H
 #include <fstream>
+//#include "Repositories/pizzarespository.h"
 #include "UI/menutopping.h"
+
 
 using namespace std;
 class NewMenuTopping
@@ -10,7 +12,10 @@ class NewMenuTopping
         NewMenuTopping();
         NewMenuTopping(int id, int numberOfToppings, string name,int price);
         virtual ~NewMenuTopping();
+
         int getID();
+        int getPrice();
+        string getName();
         void initialize(int numberOfToppings);
         void clean();
 
@@ -28,6 +33,8 @@ class NewMenuTopping
         int _price;
         int currentToppingNum;
         int _id;
+//        PizzaRespository repo;
+
 };
 
 #endif // PIZZA_H

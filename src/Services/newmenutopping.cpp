@@ -49,13 +49,6 @@ void NewMenuTopping::clean()
     }
 
 }
-
-
-
-
-
-
-
 istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 {
     int toppingCount = 0;
@@ -79,11 +72,35 @@ ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
 
     for(int i = 0; i < pizza.toppingCount; i++)
     {
-        out << pizza.menutoppings[i] << "|";
+
+        if(i == (pizza.toppingCount - 1))
+        {
+            out << pizza.menutoppings[i] << "|";
+        }
+        else
+        {
+            out << pizza.menutoppings[i] << ",";
+        }
+
     }
-    out << pizza._price << endl << endl;
+    out << pizza._price << "|" << endl;
 
 
     return out;
+}
+
+
+int NewMenuTopping::getID()
+{
+    return _id;
+}
+int NewMenuTopping::getPrice()
+{
+    return _price;
+}
+
+string NewMenuTopping::getName()
+{
+    return _name;
 }
 

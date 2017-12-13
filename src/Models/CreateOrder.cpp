@@ -1,7 +1,7 @@
 #include "Models/CreateOrder.h"
 
 
-CreateOrder::CreateOrder(vector<string> toppings, char pizzaSize,string comments,string ID,char delivery,string place,int price,string status,char paid)
+CreateOrder::CreateOrder(string ID,char delivery,string place,char pizzaSize, vector<string> toppings, string comments,int price,string status,char paid)
 {
         _toppings = toppings;
         _pizzaSize = pizzaSize;
@@ -27,7 +27,7 @@ string CreateOrder::at(int i) const
 int CreateOrder::get_price()
 {
     return _price;
-}
+}//
 
 string CreateOrder::get_id()
 {

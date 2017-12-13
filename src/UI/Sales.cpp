@@ -35,6 +35,7 @@ void Sales::salesUI()
 
 void Sales::create_pizza()
 {
+    int total_price = 0;
     vector<string> toppings;
     char pizzaSize;
     string comments;
@@ -75,22 +76,35 @@ void Sales::create_pizza()
 
     for(int i = 0; i < numberOfPizzas; i++)
     {
+        cout << "Order from menu press 'y'" <<endl;
+        cout << "Or pick your own toppings press n" <<endl;
+        cout << "Input: ";
+        char OrderFromMenu;
+        cin >> OrderFromMenu;
+        if(OrderFromMenu == 'y')
+        {
+            cout << "pick a size L - large, M - medium or S - small" << endl;
+            cin >> pizzaSize;
+            GetFromMenu(toppings, price,pizzaSize);
+        }
+        else
+        {
+            cout << "pick a size L - large, M - medium or S - small" << endl;
+            cin >> pizzaSize;
 
-        cout << "pick a size L - large, M - medium or S - small" << endl;
-        cin >> pizzaSize;
+            addTopping(toppings);
 
-        addTopping(toppings);
+            price = getprice(pizzaSize,toppings);
+        }
 
-        price = getprice(pizzaSize,toppings);
-        CreateOrder pizza(toppings,pizzaSize,comments,id,delivery,place,price,status,paid);
+        total_price += price;
+        CreateOrder pizza(id,delivery,place,pizzaSize,toppings,comments,price,status,paid);
         cout << pizza << endl;
 
         order_service.add_pizza_to_order(pizza);
         toppings.clear();
     }
-    //read_order();
-    CreatePizza pizza;
-    //cout << pizza.get_Order_Price(id) << endl;
+    cout << total_price << endl;
     cout << endl;
 }
 
@@ -124,6 +138,16 @@ vector<string> Sales::addTopping(vector<string>& toppings)
         }
     }while(input != 'q');
     return toppings;
+}
+
+void Sales::GetFromMenu(vector<string>& toppings, int& price,char Size)
+{
+    order_service.ReadMenu();
+    int input;
+    cout << "enter number to to add pizza: ";
+    cin >> input;
+    toppings.push_back(order_service.get_toppings(input));
+    price = order_service.getMenuPrice(input,Size);
 }
 
 int Sales::getprice(char pizzaSize,vector<string> toppings)
@@ -178,5 +202,10 @@ string Sales::Stores()
 
 void Sales::read_order()
 {
-    order_service.get_Order_Price("5812345");
+    cout << "input phone number: ";
+    string input;
+    cin.ignore();
+    getline(cin,input);
+
+    order_service.get_Order_Price(input);
 }

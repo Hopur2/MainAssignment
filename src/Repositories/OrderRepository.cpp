@@ -55,9 +55,8 @@ void OrderRepository::FilterOrders(string line)
             order[counter] += line[i];
         }
     }
-    toppings.push_back(order[0]);
-    CreateOrder ord(toppings, order[1][0], order[2], order[3], order[4][0],order[5],Converttoint(order[6]),order[7],order[8][0]);
-
+    toppings.push_back(order[4]);
+    CreateOrder ord(order[0],order[1][0],order[2],order[3][0],toppings,order[5],Converttoint(order[6]),order[7],order[8][0]);
     Orders.push_back(ord);
 }
 
@@ -77,12 +76,4 @@ int OrderRepository::Converttoint(string input)
 
 }
 
-
-string OrderRepository::Converttostring(int input)
-{
-    stringstream ss;
-    ss << input;
-    string str = ss.str();
-    return str;
-}
 

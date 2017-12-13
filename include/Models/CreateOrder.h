@@ -10,7 +10,7 @@ using namespace std;
 class CreateOrder
 {
     public:
-        CreateOrder(vector<string> toppings, char pizzaSize,string comments,string ID,char delivery,string place,int price,string status,char paid);
+        CreateOrder(string ID,char delivery,string place,char pizzaSize, vector<string> toppings, string comments,int price,string status,char paid);
         unsigned int size() const;
         string at(int i) const;
         int get_price();
