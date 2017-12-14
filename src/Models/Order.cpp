@@ -1,5 +1,6 @@
 #include "Models/Order.h"
-
+#include <stdio.h>
+#include <string.h>
 Order::Order(int ID, int Deliver, string Location, char Size, string Toppings, string Comment, int Prize, string Status, int Payed)
 {
     //ctor

@@ -16,6 +16,7 @@ void DeliveryUI::MainMenu()
         cin >> ssn;
         system("cls");
         PrintOrder(ssn);
+        ManageOrder(ssn);
     }
 }
 
@@ -64,4 +65,30 @@ void DeliveryUI::PrintOrder(string ssn)
         cout << prize << endl;
     }
     cout << "==============================================================================================" << endl;
+}
+
+void DeliveryUI::ManageOrder(string ssn)
+{
+    char option;
+    cout << "What would you like to do" << endl;
+    cout << "(p) - Payed, (d) - Delivered, (q) - Quit" << endl;
+    while(option != 'q')
+    {
+        cin >> option;
+        switch(option)
+        {
+            case 'p':
+                cout << "Order has been payed for" << endl;
+                break;
+            case 'd':
+                cout << "Order has been delivered" << endl;
+                break;
+            case 'q':
+                cout << "You have chosen quit" << endl;
+                break;
+            default:
+                cout << "You can't read" << endl;
+                break;
+        }
+    }
 }
