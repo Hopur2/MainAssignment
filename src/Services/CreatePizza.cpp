@@ -2,7 +2,7 @@
 CreatePizza::CreatePizza()
 {
     repo.ReadFile();
-    Orders = repo.PassRecords();
+    orders = repo.PassRecords();
 
     pizza_repo.ReadMenu();
     menu = pizza_repo.PassMenu();
@@ -17,9 +17,9 @@ CreatePizza::CreatePizza()
 
 }
 
-void CreatePizza::add_pizza_to_order(const CreateOrder& order1)
+void CreatePizza::AddPizzaToOrder(const CreateOrder& order1)
 {
-    repo.storePizza(order1);
+    repo.StorePizza(order1);
 }
 
 void CreatePizza::ReadMenu()
@@ -32,7 +32,7 @@ void CreatePizza::ReadToppings()
     pizza_repo.retrieveTopping();
 }
 
-string CreatePizza:: get_toppings(int id)
+string CreatePizza::GetToppings(int id)
 {
     string name;
     for(unsigned int i = 0; i < toppingMenu.size(); i++)
@@ -45,7 +45,7 @@ string CreatePizza:: get_toppings(int id)
     return name;
 }
 
-int CreatePizza:: get_topping_price(int id)
+int CreatePizza:: GetToppingPrice(int id)
 {
     int price = 0;
     for(unsigned int i = 0; i < toppingMenu.size(); i++)
@@ -58,7 +58,7 @@ int CreatePizza:: get_topping_price(int id)
     return price;
 }
 
-string CreatePizza::get_MenuItem(int id)
+string CreatePizza::GetMenuItem(int id)
 {
     string name;
     for(unsigned int i = 0; i < menu.size(); i++)
@@ -71,9 +71,9 @@ string CreatePizza::get_MenuItem(int id)
     return name;
 }
 
-int CreatePizza::getMenuPrice(int id,char Size)
+int CreatePizza::GetMenuPrice(int id,char Size)
 {
-        int price = 0;
+    int price = 0;
     for(unsigned int i = 0; i < menu.size(); i++)
     {
         if(menu[i].getID() == id)
@@ -92,21 +92,23 @@ int CreatePizza::getMenuPrice(int id,char Size)
     return price;
 }
 
-int CreatePizza::get_Order_Price(string id)
+int CreatePizza::GetOrderPrice(string id)
 {
     int total_price = 0;
-    for(unsigned int i = 0; i < Orders.size(); i++)
+    for(unsigned int i = 0; i < orders.size(); i++)
     {
-        if(Orders[i].get_id() == id)
+        if(orders[i].GetId() == id)
         {
-            total_price += Orders[i].get_price();
+            total_price += orders[i].GetPrice();
         }
     }
     return total_price;
 
 }
 
-int CreatePizza::convert_to_int(string input)
+
+
+int CreatePizza::ConvertToInt(string input)
 {
     int newint = repo.Converttoint(input);
     return newint;

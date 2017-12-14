@@ -16,7 +16,9 @@
 5812345|0|stadur|L|ham|hallo|2200|Preparation|0|
 5812345|0|stadur|s|pepperoni|hallo|1700|Preparation|0|
 5812345|0|stadur|m|mushroom|hallo|1900|Preparation|0|
-0|0|| |||0||0|
 1234567|1|3|L|Pizzanafn|dsfasdf|1590|Preparation|0|
 1234567|1|3|L|Nafn4|dsfasdf|400|Preparation|0|
-0|0|| |||0||0|
+63453532|1|1|L||gelllaba|3490|Preparation|n|
+1239876|0|HR|L|pepp,beef,bacon|haskoli reykjavikur|2751|Preparation|n|
+1239876|0|HR|L||haskoli reykjavikur|1590|Preparation|n|
+412414123|1|1|L|pepp,beef|231|2451|Preparation|y|
