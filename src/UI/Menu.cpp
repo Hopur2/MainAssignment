@@ -1,5 +1,5 @@
 #include "UI/Menu.h"
-
+#include <stdlib.h>
 Menu::Menu()
 {
     Sales sales;
