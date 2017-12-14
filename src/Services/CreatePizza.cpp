@@ -3,13 +3,13 @@ CreatePizza::CreatePizza()
 {
     repo.ReadFile();
     Orders = repo.PassRecords();
+
     pizza_repo.ReadMenu();
     menu = pizza_repo.PassMenu();
-<<<<<<< HEAD
-    //pizza_repo.ReadFile();
-    //menu = pizza_repo.PassRecords();
-=======
->>>>>>> a22233ea9fb46d7a3eef66a3a156a9604cbc3375
+
+    pizza_repo.ReadTopping();
+    toppingMenu = pizza_repo.PassTopping();
+
 }
 
 void CreatePizza::add_pizza_to_order(const CreateOrder& order1)
@@ -22,12 +22,43 @@ void CreatePizza::ReadMenu()
     pizza_repo.retrievePizza();
 }
 
+void CreatePizza::ReadToppings()
+{
+    pizza_repo.retrieveTopping();
+}
+
 string CreatePizza:: get_toppings(int id)
+{
+    string name;
+    for(unsigned int i = 0; i < toppingMenu.size(); i++)
+    {
+        if(toppingMenu[i].getID() == id)
+        {
+            name = toppingMenu[i].getName();
+        }
+    }
+    return name;
+}
+
+int CreatePizza:: get_topping_price(int id)
+{
+    int price = 0;
+    for(unsigned int i = 0; i < toppingMenu.size(); i++)
+    {
+        if(toppingMenu[i].getID() == id)
+        {
+            price = toppingMenu[i].getPrice();
+        }
+    }
+    return price;
+}
+
+string CreatePizza::get_MenuItem(int id)
 {
     string name;
     for(unsigned int i = 0; i < menu.size(); i++)
     {
-        if(menu[i].getID() == id)
+        if(toppingMenu[i].getID() == id)
         {
             name = menu[i].getName();
         }
@@ -68,4 +99,10 @@ int CreatePizza::get_Order_Price(string id)
     }
     return total_price;
 
+}
+
+int CreatePizza::convert_to_int(string input)
+{
+    int newint = repo.Converttoint(input);
+    return newint;
 }

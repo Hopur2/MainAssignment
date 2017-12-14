@@ -7,10 +7,11 @@ Sales::Sales()
 
 void Sales::salesUI()
 {
-    cout << "Welcome Sales persons" << endl;
-    cout << "1. make order" << endl;
-    cout << "2. read Order" << endl;
-    cout << "3. Go To Main Menu" << endl;
+    cout << "============== Welcome Sales persons ==============" << endl;
+    cout << "[1]. make order" << endl;
+    cout << "[2]. read Order" << endl;
+    cout << "[3]. Go To Main Menu" << endl;
+    cout << "===================================================" << endl;
     char choice;
     cin >> choice;
     switch(choice)
@@ -46,10 +47,10 @@ void Sales::create_pizza()
     int numberOfPizzas = 0;
     char paid;
     string status ="Preparation";
-
-    cout << "enter phone Number for order: ";
+    cout << "================== Create Order ===================" <<endl;
+    cout << "Enter phone Number for order: ";
     cin >> id;
-
+    cout << "---------------------------------------------------" << endl;
     cout << "press 0 for delivery or 1 for retrieval: ";
     cin >> delivery;
     if(delivery == '1')
@@ -62,25 +63,27 @@ void Sales::create_pizza()
         cin.ignore();
         getline(cin,place);
     }
-
+    cout << "---------------------------------------------------" << endl;
     cout << "press Y to pay now or N to pay during retrieval: ";
     cin >> paid;
-
+    cout << "---------------------------------------------------" << endl;
     cout << "Add a comment to the order: ";
     cin.ignore();
     getline(cin,comments);
-
+    cout << "---------------------------------------------------" << endl;
     cout << "how many pizzas: ";
     cin >> numberOfPizzas;
 
 
     for(int i = 0; i < numberOfPizzas; i++)
     {
+        cout << "---------------------------------------------------" << endl;
         cout << "Order from menu press 'y'" <<endl;
         cout << "Or pick your own toppings press n" <<endl;
         cout << "Input: ";
         char OrderFromMenu;
         cin >> OrderFromMenu;
+        cout << "---------------------------------------------------" << endl;
         if(OrderFromMenu == 'y')
         {
             cout << "pick a size L - large, M - medium or S - small" << endl;
@@ -92,9 +95,9 @@ void Sales::create_pizza()
             cout << "pick a size L - large, M - medium or S - small" << endl;
             cin >> pizzaSize;
 
-            addTopping(toppings);
+            addTopping(toppings,price);
 
-            price = getprice(pizzaSize,toppings);
+            price += getprice(pizzaSize);
         }
 
         total_price += price;
@@ -104,40 +107,39 @@ void Sales::create_pizza()
         order_service.add_pizza_to_order(pizza);
         toppings.clear();
     }
-    cout << total_price << endl;
-    cout << endl;
+    cout << "---------------------------------------------------" << endl;
+    cout << "Price of Order: " << total_price << endl;
+    cout << "================== Create Order ===================" <<endl;
 }
 
-vector<string> Sales::addTopping(vector<string>& toppings)
+void Sales::addTopping(vector<string>& toppings,int& price)
 {
-    cout << "press q to stop adding toppings" << endl;
-    cout << "h - ham | p - pepperoni | m - mushroom" <<endl;
-    char input;
+    order_service.ReadToppings();
+    int id;
+    string input;
+    bool leave = true;
+    cout << "'q' to quit" <<endl;
+    cout << "enter the id of topping: ";
+
     do
     {
         cin >> input;
-        if(input == 'h')
+        if(!isalpha(input[0]))
         {
-            toppings.push_back("ham");
+            id = order_service.convert_to_int(input);
+            toppings.push_back(order_service.get_toppings(id));
+            price += order_service.get_topping_price(id);
         }
-        else if(input == 'p')
+        else if(input == "q" || input == "Q")
         {
-            toppings.push_back("pepperoni");
-        }
-        else if(input == 'm')
-        {
-            toppings.push_back("mushroom");
-        }
-        else if(input == 'q')
-        {
-            cout << "leaving" <<endl;
+            leave = false;
         }
         else
         {
-            cout << "invalid input" <<endl;
+            cout << "wrong input" <<endl;
         }
-    }while(input != 'q');
-    return toppings;
+    }while(leave == true);
+
 }
 
 void Sales::GetFromMenu(vector<string>& toppings, int& price,char Size)
@@ -146,11 +148,11 @@ void Sales::GetFromMenu(vector<string>& toppings, int& price,char Size)
     int input;
     cout << "enter number to to add pizza: ";
     cin >> input;
-    toppings.push_back(order_service.get_toppings(input));
+    toppings.push_back(order_service.get_MenuItem(input));
     price = order_service.getMenuPrice(input,Size);
 }
 
-int Sales::getprice(char pizzaSize,vector<string> toppings)
+int Sales::getprice(char pizzaSize)
 {
     int price = 0;
     if(pizzaSize == 'l' || pizzaSize == 'L')
@@ -165,7 +167,6 @@ int Sales::getprice(char pizzaSize,vector<string> toppings)
     {
         price = 1500;
     }
-    price += (toppings.size() * 200);
     return price;
 }
 
