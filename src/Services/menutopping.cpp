@@ -24,11 +24,7 @@ MenuTopping::MenuTopping(char *name)
 
 istream& operator >>(istream& in, MenuTopping& menutopping)
 {
-    //cout << "Name: ";
-    in >> menutopping.name;
-
-
-
+    //in >> menutopping.name;
 
     return in;
 }
@@ -36,8 +32,7 @@ istream& operator >>(istream& in, MenuTopping& menutopping)
 ostream& operator <<(ostream& out, const MenuTopping& menutopping)
 {
 
-    out << menutopping.name;
-
+  //  out << menutopping.name;
 
     return out;
 }

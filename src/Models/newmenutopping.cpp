@@ -20,6 +20,8 @@ NewMenuTopping::~NewMenuTopping()
 
 
 }
+
+
 ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
 {
     out << pizza._id << "|" << pizza._name << "|";
@@ -33,7 +35,7 @@ ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
         }
     }
     out << "|";
-    out << pizza._price << "|";
+    out << pizza._price << "|" << endl;
 
     return out;
 }
