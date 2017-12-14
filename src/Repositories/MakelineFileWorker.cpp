@@ -22,12 +22,13 @@ void MakelineFileWorker::ReadFile(string file)
             }
             FilterFile(line);
         }
+        fin.close();
     }
     else
     {
-        cout << "File could not be opened" << endl;
+        cout << "File Couldn't be opened" << endl;
     }
-    fin.close();
+
 
 }
 
