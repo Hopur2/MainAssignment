@@ -6,7 +6,7 @@ OrderRepository::OrderRepository()
 }
 
 
-void OrderRepository::storePizza(const CreateOrder& pizza)
+void OrderRepository::StorePizza(const CreateOrder& pizza)
 {
     ofstream fout;
     fout.open("Orders.txt", ios::app);

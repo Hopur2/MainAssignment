@@ -24,12 +24,12 @@ string CreateOrder::at(int i) const
    return _toppings[i];
 }
 
-int CreateOrder::get_price()
+int CreateOrder::GetPrice()
 {
     return _price;
 }//
 
-string CreateOrder::get_id()
+string CreateOrder::GetId()
 {
     return _ID;
 }

@@ -9,18 +9,21 @@ class CreatePizza
     public:
 
         CreatePizza();
-        int get_Order_Price(string id);
-        void add_pizza_to_order(const CreateOrder& order1);
-        string get_toppings(int id);
-        int get_topping_price(int id);
-        int getMenuPrice(int id,char Size);
-        string get_MenuItem(int id);
+        int GetOrderPrice(string id);
+        void AddPizzaToOrder(const CreateOrder& order1);
+        string GetToppings(int id);
+        int GetToppingPrice(int id);
+        int GetMenuPrice(int id,char Size);
+        string GetMenuItem(int id);
         void ReadMenu();
         void ReadToppings();
-        int convert_to_int(string input);
+        int ConvertToInt(string input);
+        bool IsValidPhoneNumber(int phoneNumber);
+        bool IsValidSize(char Size);
+        bool IsValidPayment(char answer);
 
     private:
-        vector<CreateOrder> Orders;
+        vector<CreateOrder> orders;
         vector<NewMenuTopping> menu;
         vector<Topping> toppingMenu;
 

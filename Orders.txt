@@ -19,4 +19,11 @@
 5812345|0|stadur|m|mushroom|hallo|1900|Preparation|0|
 1234567|1|3|L|Pizzanafn|dsfasdf|1590|Preparation|0|
 1234567|1|3|L|Nafn4|dsfasdf|400|Preparation|0|
+<<<<<<< HEAD
+63453532|1|1|L||gelllaba|3490|Preparation|n|
+1239876|0|HR|L|pepp,beef,bacon|haskoli reykjavikur|2751|Preparation|n|
+1239876|0|HR|L||haskoli reykjavikur|1590|Preparation|n|
+412414123|1|1|L|pepp,beef|231|2451|Preparation|y|
+=======
 >>>>>>> 603521f82891a58ae61a3fca6a412ba2165e2b5f
+>>>>>>> 5752922f3054aa5d0ef17f4f9293a8b7c9043a29

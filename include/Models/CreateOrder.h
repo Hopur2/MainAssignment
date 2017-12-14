@@ -13,8 +13,8 @@ class CreateOrder
         CreateOrder(string ID,char delivery,string place,char pizzaSize, vector<string> toppings, string comments,int price,string status,char paid);
         unsigned int size() const;
         string at(int i) const;
-        int get_price();
-        string get_id();
+        int GetPrice();
+        string GetId();
 
         friend ostream& operator <<(ostream& out, const CreateOrder& createOrder);
 
