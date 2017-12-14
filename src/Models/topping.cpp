@@ -41,3 +41,8 @@ int Topping::getPrice()
 {
     return _price;
 }
+
+string Topping::getName()
+{
+    return _name;
+}

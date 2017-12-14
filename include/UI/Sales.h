@@ -12,9 +12,9 @@ class Sales
         void salesUI();
         void create_pizza();
         void read_order();
-        vector<string> addTopping(vector<string>& toppings);
+        void addTopping(vector<string>& toppings,int& price);
         void GetFromMenu(vector<string>& toppings, int& price, char Size);
-        int getprice(char pizzaSize,vector<string> toppings);
+        int getprice(char pizzaSize);
         string Stores();
     private:
         CreatePizza order_service;

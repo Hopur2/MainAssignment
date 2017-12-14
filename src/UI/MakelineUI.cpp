@@ -11,15 +11,22 @@ void MakelineUI::MainMenu()
     string input;
     bool showdone = false;
     while(true) {
+        system("cls");
         if(showdone)
         {
+            cout << "=====================================================================================================" << endl;
             cout << "Showing Done Orders ---- press r to return and q to quit" << endl;
+            cout << "-----------------------------------------------------------------------------------------------------" << endl;
             PrintDoneOrders();
+            cout << "=====================================================================================================" << endl;
         }
         else
         {
+            cout << "=====================================================================================================" << endl;
             cout << "Showing Orders to do ---- press r to show done orders and q to quit" << endl;
+            cout << "-----------------------------------------------------------------------------------------------------" << endl;
             PrintOrders();
+            cout << "=====================================================================================================" << endl;
         }
         cout << "What Order have you done?" << endl;
         cin >> input;
@@ -80,10 +87,14 @@ void MakelineUI::PickStore()
     string store;
     while(store != "1" && store != "2" && store != "3")
     {
+        system("cls");
+        cout << "===================================================" << endl;
         cout << "What store are you in?" << endl;
-        cout << "1 - Highway Street 11" << endl;
-        cout << "2 - Lowway Street 12" << endl;
-        cout << "3 - Middleway Street 13" << endl;
+        cout << "---------------------------------------------------" << endl;
+        cout << "[1] - Highway Street 11" << endl;
+        cout << "[2] - Lowway Street 12" << endl;
+        cout << "[3] - Middleway Street 13" << endl;
+        cout << "===================================================" << endl;
         cin >> store;
     }
     MS.SetStore(store);
