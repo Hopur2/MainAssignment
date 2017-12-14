@@ -19,14 +19,16 @@ void adminmainUI::startUI()
 {
 
 char choice;
-        cout << "1: New pizza on menu" << endl;
-        cout << "2: Make topping" << endl;
-        cout << "3: Read toppings" << endl;
-        cout << "4: Read menu" << endl;
-        cout << "5: Delete from menu" << endl;
-        cout << "6: New location" << endl;
-        cout << "7: New stuff" << endl;
-        cout << "8: Go to main menu" << endl;
+        cout << "=================== Welcome Admin ==================" << endl;
+        cout << "[1]. New pizza on menu" << endl;
+        cout << "[2]. Make topping" << endl;
+        cout << "[3]. Read toppings" << endl;
+        cout << "[4]. Read menu" << endl;
+        cout << "[5]. Delete from menu" << endl;
+        cout << "[6]. New location" << endl;
+        cout << "[7]. New stuff" << endl;
+        cout << "[8]. Go to main menu" << endl;
+        cout << "====================================================" << endl;
     cin >> choice;
     switch(choice)
     {
@@ -75,6 +77,7 @@ void adminmainUI::New_location()
 
         int topCnt;
 
+        cout << "=================== New Location ===================" << endl;
         cout << "How many new locations: ";
         cin >> topCnt;
 
@@ -112,6 +115,8 @@ void adminmainUI::create_menu()
         int price;
         string input;
         vector<string> topping;
+
+        cout << "===================== New Pizza ====================" << endl;
         cout << "Id: ";
         cin >> id;
         cout << "Name: ";
@@ -143,6 +148,8 @@ cout << endl;
 void adminmainUI::delete_menu()
 {
     string deleteline;
+
+    cout << "=================== Delete Pizza ===================" << endl;
     cout << "Id: ";
     cin >> deleteline;
     PizzaRespository repo;
@@ -174,6 +181,8 @@ void adminmainUI::delete_menu()
 void adminmainUI::create_topping()
 {
      int topCnt;
+
+       cout << "===================== New Topping ==================" << endl;
         cout << "How many toppings: ";
         cin >> topCnt;
         int id;
@@ -196,7 +205,9 @@ void adminmainUI::create_topping()
 void adminmainUI::New_Stuff()
 {
      int topCnt;
-        cout << "How many new stuff: ";
+
+     cout << "==================== New Sides =====================" << endl;
+        cout << "How many new sides: ";
         cin >> topCnt;
         int id;
         string name;
@@ -217,12 +228,12 @@ void adminmainUI::New_Stuff()
 }
 void adminmainUI::readTopp()
 {
-
+    cout << "================== Toppings ========================" << endl;
     services.retrieveTopping();
 }
 void adminmainUI::readMenu()
 {
-
+    cout << "===================== Menu =========================" << endl;
     services.retrievePizza();
 }
 

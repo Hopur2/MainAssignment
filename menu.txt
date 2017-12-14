@@ -12,3 +12,4 @@
 100|Pizzanafn|pepp,hakk,beikon|1590|
 50|Meat&Cheese|pepperoni,cheddarCheese,bacon|3490|
 >>>>>>> 603521f82891a58ae61a3fca6a412ba2165e2b5f
+1|1|1|1|
