@@ -1,0 +1,47 @@
+6604068|1|1|m|ham,ham,pepperoni,mushroom|I Like It HAWT|2500|Delivered|1|
+6604068|1|1|l|mushroom,pepperoni|Gimme Hot PIZZA|2400|Delivered|1|
+6604068|1|1|l|ham,pepperoni|yes|2400|Delivered|1|
+6604068|1|1|L|ham,pepperoni|Gimme Hot PIZZA|2400|Delivered|1|
+6604068|1|1|L|ham,pepperoni|yes|2400|Delivered|1|
+6604068|1|1|l|ham,pepperoni|Gimme Hot PIZZA|2400|Delivered|1|
+6604068|1|1|L|mushroom,pepperoni|Gimme Hot PIZZA|2400|Delivered|1|
+6604068|1|1|l|ham|I Like It HAWT|2200|Delivered|1|
+6604068|1|1|L|mushroom|yes|2200|Delivered|1|
+7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Delivered|1|
+7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Delivered|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Delivered|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Delivered|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Delivered|1|
+6933399|1|1|l|Nafn3|Yoss|300|Delivered|1|
+6933399|1|1|l|Nafn5|Yoss|500|Delivered|1|
+6933399|1|1|l|Nafn5|Yoss|500|Delivered|1|
+6933399|1|1|l|Nafn5|Yoss|500|Delivered|1|
+6933399|1|1|l|Nafn4|Yoss|400|Delivered|1|
+6933399|1|1|l|Nafn5|Yoss|500|Delivered|1|
+6933399|1|1|l|Nafn5|Yoss|500|Delivered|1|
+6933399|1|1|l|Nafn3|Yoss|0|Delivered|1|
+6933399|1|1|l|Nafn3|Works?|300|Delivered|1|
+6933399|1|1|l|Nafn3|Works?|300|Delivered|1|
+6933399|1|1|l|Nafn3|Works?|300|Delivered|1|
+6933399|1|1|l|Nafn3|Works?|300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|a|300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|a|300|Delivered|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Delivered|1|
+6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|a|300|Delivered|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Delivered|1|
+6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|Sala|300|Delivered|1|
+6933399|1|1|l|Nafn3|a|300|Delivered|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Delivered|1|
+6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Delivered|1|
+6933399|1|1|l|Nafn3|asdf|300|Delivered|1|
+6933399|1|2|L|Nafn5|Hafa hana djusi|500|Delivered|1|
+6933399|1|2|L|pepp,beef,bacon|Hafa hana djusi|2760|Delivered|1|

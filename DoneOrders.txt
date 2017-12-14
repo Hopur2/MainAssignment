@@ -9,9 +9,17 @@
 6604068|1|1|l|ham,pepperoni|yes|2400|Ready|0|
 5674321|1|1|m|ham,mushroom|no|2100|Ready|0|
 7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|
-<<<<<<< HEAD
-7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Ready|0|
-=======
 7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|
 6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Ready|0|
->>>>>>> 18cd8dceca2c0359d7b40a839d13980f1f90b798
+7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Ready|0|
+7775757|1|1|l|Nafn1|Loving the sweet life|100|Ready|0|
+7775757|1|1|l|Nafn2|Loving the sweet life|200|Ready|0|
+7775757|1|1|l|Nafn3|Loving the sweet life|300|Ready|0|
+7775757|1|1|l|Nafn4|Loving the sweet life|400|Ready|0|
+6604068|1|1|L|ham,pepperoni|Gimme Hot PIZZA|2400|Ready|0|
+6604068|1|1|L|mushroom,pepperoni|Gimme Hot PIZZA|2400|Ready|0|
+6604068|1|1|L|ham,pepperoni|yes|2400|Ready|0|
+6604068|1|1|L|mushroom|yes|2200|Ready|0|
+7775757|1|1|l|ham,mushroom|Ekki Dominos|2400|Ready|0|
+7775757|1|1|l|Nafn3|Ekki Dominos|300|Ready|0|

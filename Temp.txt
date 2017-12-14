@@ -9,8 +9,6 @@
 7|0|_arna|L|ham,pepperoni|eg by ekki _arna|2400|Preparation|n|
 7|0|_arna|M|ham,pepperoni,ham,mushroom|eg by ekki _arna|2500|Preparation|n|
 7|0|_arna|S|ham,pepperoni,ham,mushroom,pepperoni,mushroom|eg by ekki _arna|2700|Preparation|n|
-=======
-<<<<<<< HEAD
 0|0|R¢sarimi 4|l|ham,pepperoni,mushroom,|HOT BABY|
 1|1|Lowway Street 12|77|ham,|2 + 2 = 3?|
 2|1|Highway Street 11|L|ham,pepperoni,|lololol|
@@ -18,28 +16,15 @@
 3|1|Middleway Street 13|l|ham,mushroom|no|4400|
 3|1|Highway Street 11|m|ham,pepperoni|plead the fifth|2100|
 32|1|Lowway Street 12|l|ham,mushroom|Spicy boiiiis|2400|Preparation|n|
-=======
-l|ham,|Keep it hot
-
-l|ham,mushroom,|juicy very hot|
-
 219|l|ham,pepperoni,|Viktor   etta|
-
 69|l|ham,pepperoni,mushroom,|Hafa Juicy bois|
-
 25|m|pepperoni,mushroom,|PS2|
-
 68|l|ham,pepperoni,mushroom,|Konan er picky|
-
->>>>>>> 1a492552ccf89e228a5ced00079a4eb73103b7a6
-<<<<<<< HEAD
 1|0|abc|L|ham,pepperoni,mushroom|abc|2600|Preparation|n|
 500|0|abc|l|ham,pepperoni,mushroom|abc|2600|Preparation|n|
-=======
 12|1|Middleway Street 13|L|pepperoni,mushroom|Hafa Juicy Bois|2400|Preparation|n|
 23|0|HR|l|ham,pepperoni,mushroom|Juicy|2600|Preparation|y|
 47|0|HR|m|ham,pepperoni,mushroom|Hafa Juicy|2300|Preparation|n|
->>>>>>> 2b3d954d4b723aaf2867fae1755c9dccf302bf06
 6604068|1|1|L|ham|I Like It HAWT|2200|Preparation|y|
 6604068|1|1|M|ham,ham,pepperoni,mushroom|I Like It HAWT|2500|Preparation|y|
 1234567|1|1|L|ham,pepperoni|Rawr|2400|Preparation|y|
@@ -49,6 +34,5 @@ l|ham,mushroom,|juicy very hot|
 7654321|0|Your Moms|L|ham,mushroom|Hello|2400|Preparation|n|
 7654321|0|Your Moms|L|mushroom,pepperoni|Hello|2400|Preparation|n|
 5674321|1|1|M|ham,mushroom|no|2100|Preparation|y|
->>>>>>> 21b6e0e4ed0d0bcbcc8cbf6dbda3fcee985cd6c5
 6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Preparation|y|
 6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Preparation|y|

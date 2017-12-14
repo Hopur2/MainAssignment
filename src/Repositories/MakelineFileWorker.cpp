@@ -7,6 +7,7 @@ MakelineFileWorker::MakelineFileWorker()
 
 void MakelineFileWorker::ReadFile(string file)
 {
+    _Orders.clear();
     string line;
     ifstream fin;
     fin.open(file.c_str());
@@ -15,6 +16,10 @@ void MakelineFileWorker::ReadFile(string file)
         while(!fin.eof())
         {
             getline(fin, line);
+            if(line.size() == 0)
+            {
+                break;
+            }
             FilterFile(line);
         }
     }
