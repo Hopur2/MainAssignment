@@ -51,6 +51,11 @@ void Order::SetStatus(string s)
     _status = s;
 }
 
+void Order::SetPayed(int p)
+{
+    _payed = p;
+}
+
 ostream& operator << (ostream& out, const Order& order)
 {
     if(order._verbose == 1)

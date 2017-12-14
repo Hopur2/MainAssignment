@@ -16,6 +16,7 @@ class Order
         string GetLocation();
         void SetVerbose(int b);
         void SetStatus(string s);
+        void SetPayed(int p);
         friend ostream& operator << (ostream& out, const Order& order);
     private:
         int _ID;

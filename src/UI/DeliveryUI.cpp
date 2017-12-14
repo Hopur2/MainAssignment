@@ -10,14 +10,10 @@ void DeliveryUI::MainMenu()
     string ssn;
     system("cls");
     PickStore();
-    while(true)
-    {
-        cout << "Phone Number" << endl;
-        cin >> ssn;
-        system("cls");
-        PrintOrder(ssn);
-        ManageOrder(ssn);
-    }
+    cout << "Phone Number" << endl;
+    cin >> ssn;
+    PrintOrder(ssn);
+    ManageOrder(ssn);
 }
 
 void DeliveryUI::PickStore()
@@ -41,6 +37,7 @@ void DeliveryUI::PrintOrder(string ssn)
 {
     int prize = 0;
     order = DS.FindOrder(ssn);
+    system("cls");
     cout << "==============================================================================================" << endl;
     cout << "Order for phone number: " << ssn << endl;
     cout << "----------------------------------------------------------------------------------------------" << endl;
@@ -65,23 +62,25 @@ void DeliveryUI::PrintOrder(string ssn)
         cout << prize << endl;
     }
     cout << "==============================================================================================" << endl;
+    cout << "What would you like to do" << endl;
+    cout << "(p) - Payed, (d) - Delivered, (q) - Quit" << endl;
 }
 
 void DeliveryUI::ManageOrder(string ssn)
 {
     char option;
-    cout << "What would you like to do" << endl;
-    cout << "(p) - Payed, (d) - Delivered, (q) - Quit" << endl;
     while(option != 'q')
     {
         cin >> option;
         switch(option)
         {
             case 'p':
-                cout << "Order has been payed for" << endl;
+                DS.OrderPayed(ssn);
+                PrintOrder(ssn);
                 break;
             case 'd':
-                cout << "Order has been delivered" << endl;
+                DS.OrderDelivered(ssn);
+                PrintOrder(ssn);
                 break;
             case 'q':
                 cout << "You have chosen quit" << endl;
