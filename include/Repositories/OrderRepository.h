@@ -1,6 +1,6 @@
 #ifndef ORDERREPOSITORY_H
 #define ORDERREPOSITORY_H
-//#include "Services/CreatePizza.h"
+
 #include "Models/CreateOrder.h"
 #include <fstream>
 #include <vector>
@@ -11,7 +11,7 @@ class OrderRepository
 {
     public:
         OrderRepository();
-        void storePizza(const CreateOrder& pizza);
+        void StorePizza(const CreateOrder& pizza);
         void FilterOrders(string line);
         int Converttoint(string input);
         vector<CreateOrder> PassRecords();

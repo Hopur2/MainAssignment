@@ -79,22 +79,19 @@ void Sales::create_pizza()
     {
         cout << "---------------------------------------------------" << endl;
         cout << "Order from menu press 'y'" <<endl;
-        cout << "Or pick your own toppings press n" <<endl;
+        cout << "Or pick your own toppings press 'n'" <<endl;
         cout << "Input: ";
         char OrderFromMenu;
         cin >> OrderFromMenu;
         cout << "---------------------------------------------------" << endl;
+        cout << "pick a size L - large, M - medium or S - small" << endl;
+        cin >> pizzaSize;
         if(OrderFromMenu == 'y')
         {
-            cout << "pick a size L - large, M - medium or S - small" << endl;
-            cin >> pizzaSize;
             GetFromMenu(toppings, price,pizzaSize);
         }
         else
         {
-            cout << "pick a size L - large, M - medium or S - small" << endl;
-            cin >> pizzaSize;
-
             addTopping(toppings,price);
 
             price += getprice(pizzaSize);
@@ -104,7 +101,7 @@ void Sales::create_pizza()
         CreateOrder pizza(id,delivery,place,pizzaSize,toppings,comments,price,status,paid);
         cout << pizza << endl;
 
-        order_service.add_pizza_to_order(pizza);
+        order_service.AddPizzaToOrder(pizza);
         toppings.clear();
     }
     cout << "---------------------------------------------------" << endl;
@@ -126,9 +123,9 @@ void Sales::addTopping(vector<string>& toppings,int& price)
         cin >> input;
         if(!isalpha(input[0]))
         {
-            id = order_service.convert_to_int(input);
-            toppings.push_back(order_service.get_toppings(id));
-            price += order_service.get_topping_price(id);
+            id = order_service.ConvertToInt(input);
+            toppings.push_back(order_service.GetToppings(id));
+            price += order_service.GetToppingPrice(id);
         }
         else if(input == "q" || input == "Q")
         {
@@ -148,8 +145,8 @@ void Sales::GetFromMenu(vector<string>& toppings, int& price,char Size)
     int input;
     cout << "enter number to to add pizza: ";
     cin >> input;
-    toppings.push_back(order_service.get_MenuItem(input));
-    price = order_service.getMenuPrice(input,Size);
+    toppings.push_back(order_service.GetMenuItem(input));
+    price = order_service.GetMenuPrice(input,Size);
 }
 
 int Sales::getprice(char pizzaSize)
@@ -208,5 +205,5 @@ void Sales::read_order()
     cin.ignore();
     getline(cin,input);
 
-    order_service.get_Order_Price(input);
+    order_service.GetOrderPrice(input);
 }

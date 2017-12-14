@@ -5,6 +5,7 @@ Menu::Menu()
     Sales sales;
     MakelineUI makeline;
     DeliveryUI delivery;
+    adminmainUI adminmainui;
     while(true)
     {
         //ctor
@@ -20,7 +21,7 @@ Menu::Menu()
         cin >> _choice;
         switch(_choice) {
             case '1':
-                adminmainUI();
+                adminmainui.startUI();
                 break;
             case '2':
                 makeline.MainMenu();

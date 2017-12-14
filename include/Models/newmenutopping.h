@@ -1,8 +1,9 @@
 #ifndef NEWMENUTOPPING_H
 #define NEWMENUTOPPING_H
 #include <fstream>
-//#include "Repositories/pizzarespository.h"
-#include "UI/menutopping.h"
+
+
+
 #include <vector>
 
 
@@ -13,31 +14,17 @@ class NewMenuTopping
         NewMenuTopping();
         NewMenuTopping(int id,  string name, vector<string> topping, int price);
         virtual ~NewMenuTopping();
-        void PrintSpecific(string input);
         int getID();
         int getPrice();
         string getName();
-        void initialize(int numberOfToppings);
-        void clean();
-
-        void menuaddTopping(MenuTopping menutopping);
-
-        friend istream& operator >>(istream& in, NewMenuTopping& pizza);
-
         friend ostream& operator <<(ostream& out, const NewMenuTopping& pizza);
-
     protected:
     private:
         vector<string> _topping;
-        MenuTopping *menutoppings;
         int toppingCount;
         string _name;
         int _price;
-        int currentToppingNum;
         int _id;
-
-
-
 };
 
-#endif // PIZZA_H
+#endif
