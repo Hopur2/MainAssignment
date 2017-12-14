@@ -1,5 +1,6 @@
 #include "Models/Order.h"
-
+#include <stdio.h>
+#include <string.h>
 Order::Order(int ID, int Deliver, string Location, char Size, string Toppings, string Comment, int Prize, string Status, int Payed)
 {
     //ctor
@@ -48,6 +49,11 @@ void Order::SetVerbose(int b)
 void Order::SetStatus(string s)
 {
     _status = s;
+}
+
+void Order::SetPayed(int p)
+{
+    _payed = p;
 }
 
 ostream& operator << (ostream& out, const Order& order)

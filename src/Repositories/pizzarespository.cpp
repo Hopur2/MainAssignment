@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "Repositories/pizzarespository.h"
-#include "Models/pizza.h"
+
 
 PizzaRespository::PizzaRespository()
 {
@@ -14,6 +14,61 @@ PizzaRespository::~PizzaRespository()
 {
     //dtor
 }
+
+
+void PizzaRespository::ReadLocation()
+{
+    string str;
+    ifstream fin;
+    fin.open("location.txt");
+
+        if(fin.is_open())
+        {
+            while(!fin.eof())
+            {
+                getline(fin,str);
+                FilterMenu(str);
+            }
+        }
+        else
+        {
+            cout << "File note open" << endl;
+        }
+    fin.close();
+}
+
+void PizzaRespository::FilterLocation(string line)
+{
+    string order[3];
+
+
+    int counter = 0;
+    for(unsigned int i = 0; i < line.size(); i++)
+    {
+        if(line[i] == '|')
+        {
+            counter++;
+        }
+        else
+        {
+            order[counter] += line[i];
+        }
+    }
+
+    //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
+    Newlocation ord(Converttoint(order[0]), order[1], order[3]);
+
+    location.push_back(ord);
+
+}
+
+vector<Newlocation> PizzaRespository::PassLocation()
+{
+    return location;
+}
+
+
+
 
 
 void PizzaRespository::ReadMenu()
@@ -55,9 +110,7 @@ void PizzaRespository::FilterMenu(string line)
         }
     }
     topping.push_back(order[2]);
-    //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
     NewMenuTopping ord(Converttoint(order[0]), order[1], topping, Converttoint(order[3]));
-
     menu.push_back(ord);
 
 }
@@ -134,7 +187,7 @@ void PizzaRespository::ReadSides()
 {
     string str;
     ifstream fin;
-    fin.open("stuff.txt");
+    fin.open("sides.txt");
 
         if(fin.is_open())
         {
@@ -176,25 +229,23 @@ void PizzaRespository::FilterSides(string line)
     toppings.push_back(ord);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-void PizzaRespository::storeNewStuff(const Topping& topping)
+void PizzaRespository::storeNewlocation(const Newlocation& location)
 {
     ofstream fout;
 
-    fout.open("stuff.txt", ios::app);
+    fout.open("location.txt", ios::app);
 
-    fout << topping;
+    fout << location;
+
+    fout.close();
+}
+void PizzaRespository::storeNewSides(const Topping& sides)
+{
+    ofstream fout;
+
+    fout.open("sides.txt", ios::app);
+
+    fout << sides;
 
     fout.close();
 }
@@ -266,17 +317,7 @@ void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
     fin.close();
   }
 
-void PizzaRespository::NewLocation(const Newlocation& location)
- {
 
-     ofstream fout;
-
-    fout.open("location.txt", ios::app);
-
-    fout << location;
-
-    fout.close();
- }
 
 void PizzaRespository::GetLocation()
   {

@@ -10,6 +10,7 @@ class DeliveryUI
         DeliveryUI();
         void MainMenu();
         void PrintOrder(string ssn);
+        void ManageOrder(string ssn);
         void PickStore();
     private:
         DeliveryService DS;
