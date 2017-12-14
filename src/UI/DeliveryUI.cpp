@@ -8,11 +8,13 @@ DeliveryUI::DeliveryUI()
 void DeliveryUI::MainMenu()
 {
     string ssn;
+    system("cls");
     PickStore();
     while(true)
     {
         cout << "Phone Number" << endl;
         cin >> ssn;
+        system("cls");
         PrintOrder(ssn);
     }
 }

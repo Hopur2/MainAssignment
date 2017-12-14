@@ -8,6 +8,7 @@ Menu::Menu()
     while(true)
     {
         //ctor
+        system("cls");
         cout << "===================================================" << endl;
         cout << "Welcome to the *we need a name* Pizza shop" << endl;
         cout << "---------------------------------------------------" << endl;
