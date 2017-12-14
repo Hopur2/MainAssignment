@@ -1,6 +1,8 @@
 #ifndef PIZZAUI_H
 #define PIZZAUI_H
 
+#include <vector>
+#include "Services/newmenutopping.h"
 
 class PizzaUI
 {
@@ -17,7 +19,12 @@ class PizzaUI
     protected:
     private:
         int admno;
-        //char n[100];
+        vector<NewMenuTopping> menu;
+
+
+
+        //PizzaRespository repo;
+
 };
 
 #endif // PIZZAUI_H

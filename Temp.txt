@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 1|1|Lowway Street 12|L||Keep Hawt|2000|Preparation|n|
 1|1|Lowway Street 12|L||Keep Hawt|2000|Preparation|n|
 2|1|Highway Street 11|L||no|2000|Preparation|y|

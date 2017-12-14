@@ -1,42 +1,30 @@
-/*#include "deletemenu.h"
+#include "deletemenu.h"
 
 
-
-DeleteMenu::DeleteMenu(string name, string topping, int price, string status)
+#include "Repositories/pizzarespository.h"
+DeleteMenu::DeleteMenu()
 {
-    //ctor
-    _name = name;
-    _topping = topping;
-    _price = price;
-    _status = status;
-    _verbose = true;
+    pizza_repo.ReadMenu();
+    menu = pizza_repo.PassMenu();
 }
 
-void DeleteMenu::SetVerbose(bool b)
+string DeleteMenu::get_name(int id)
 {
-    _verbose = b;
-}
-
-void DeleteMenu::SetStatus(string s)
-{
-    _status = s;
-}
-
-ostream& operator << (ostream& out, const DeleteMenu& deletemenu)
-{
-    if(deletemenu._verbose)
+    string name;
+    for(unsigned int i = 0; i < menu.size(); i++)
     {
-        out << "name: " << deletemenu._name << " ";
-        out << "topping: " << deletemenu._topping << " ";
-        out << "price: " << deletemenu._price << " ";
-    }
-    else
-    {
-        out << deletemenu._name << "|";
-        out << deletemenu._topping << "|";
-        out << deletemenu._price << "|" << endl;
+        if(menu[i].getID() == id)
+        {
+            name = menu[i].getName();
+        }
     }
 
-    return out;
+    return name;
 }
-*/
+
+void DeleteMenu::PrintSpecific(string input)
+{
+    PizzaRespository ER;
+    ER.FindInFile(input);
+}
+
