@@ -5,6 +5,7 @@
 #include "UI/menutopping.h"
 #include <vector>
 
+
 using namespace std;
 class NewMenuTopping
 {
@@ -12,7 +13,7 @@ class NewMenuTopping
         NewMenuTopping();
         NewMenuTopping(int id,  string name, vector<string> topping, int price);
         virtual ~NewMenuTopping();
-
+        void PrintSpecific(string input);
         int getID();
         int getPrice();
         string getName();
@@ -34,7 +35,8 @@ class NewMenuTopping
         int _price;
         int currentToppingNum;
         int _id;
-//        PizzaRespository repo;
+
+
 
 };
 

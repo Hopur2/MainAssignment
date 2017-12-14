@@ -1,26 +1,26 @@
-/*#ifndef DELETEMENU_H
+#ifndef DELETEMENU_H
 #define DELETEMENU_H
 
 #include <iostream>
 #include <string>
 
+#include "Repositories/pizzarespository.h"
 using namespace std;
 
 class DeleteMenu
 {
     public:
-        DeleteMenu(string name, string topping, int price, string status);
-        void SetVerbose(bool b);
-        void SetStatus(string s);
-        friend ostream& operator << (ostream& out, const DeleteMenu& deletemenu);
+        DeleteMenu();
+      string get_name(int id);
+      void PrintSpecific(string input);
     protected:
     private:
-        string _name;
-        string _topping;
-        int _price;
-        string _status;
-        bool _verbose;
+        int _id;
+         vector<NewMenuTopping> menu;
+        PizzaRespository pizza_repo;
+
+
 };
 
 #endif // DELETEMENU_H
-*/
+

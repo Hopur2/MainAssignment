@@ -1,0 +1,5 @@
+1|pepp|250|
+2|beef|200|
+3|bacon|300|
+4|Mushroom|150|
+5|Fajitas|200|

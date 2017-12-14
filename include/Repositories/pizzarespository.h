@@ -27,7 +27,7 @@ class PizzaRespository
         void newMenu(const NewMenuTopping& newmenutopping);
         void NewLocation(const Newlocation& location);
 
-
+        string FindInFile(string input);
         void ReadSides();
         void FilterSides(string line);
 

@@ -9,6 +9,7 @@ using namespace std;
 #include "UI/Menu.h"
 
 
+
 PizzaUI::PizzaUI()
 {
     //ctor
@@ -132,25 +133,29 @@ cout << endl;
 void PizzaUI::delete_menu()
 {
     string deleteline;
+    cout << "Id: ";
+    cin >> deleteline;
+    PizzaRespository repo;
+    cout << repo.FindInFile(deleteline) << endl;
+    string line2 = repo.FindInFile(deleteline);
+
                 string line;
 
                 ifstream fin;
                 fin.open("menu.txt");
                 ofstream temp;
                 temp.open("tempmenu.txt");
-                cout << "Type in pizza you want to remove: ";
-                cin >> deleteline;
+             //   cout << "Type in pizza you want to remove: ";
+             //   cin >> deleteline;
 
                while (getline(fin,line))
 {
 
-    if (line != deleteline)
+    if (line != line2)
     {
     temp << line << endl;
     }
 }
-
-
                 temp.close();
                 fin.close();
                 remove("menu.txt");

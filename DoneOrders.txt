@@ -11,6 +11,8 @@
 7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|
 7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|
 6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Ready|0|
+7719590|1|1|l|pepperoni|Hun er erfi– passi– ykkur....|2200|Ready|1|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Ready|0|
 7775757|1|1|l|Nafn1|Loving the sweet life|100|Ready|0|
 7775757|1|1|l|Nafn2|Loving the sweet life|200|Ready|0|
 7775757|1|1|l|Nafn3|Loving the sweet life|300|Ready|0|

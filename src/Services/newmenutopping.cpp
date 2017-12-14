@@ -2,6 +2,7 @@
 #include <fstream>
 #include <stddef.h>
 using namespace std;
+
 NewMenuTopping::NewMenuTopping()
 {
 
@@ -53,7 +54,7 @@ void NewMenuTopping::clean()
 }*/
 istream& operator >>(istream& in, NewMenuTopping& NewMenuTopping)
 {
-    int toppingCount = 0;
+   // int toppingCount = 0;
     in >> NewMenuTopping.toppingCount;
 //    NewMenuTopping.initialize(toppingCount);
     MenuTopping menutopping;
@@ -127,4 +128,5 @@ string NewMenuTopping::getName()
 {
     return _name;
 }
+
 

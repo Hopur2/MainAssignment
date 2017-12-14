@@ -13,6 +13,7 @@ class Topping
 
         int getID();
         int getPrice();
+        string getName();
 
         friend istream& operator >>(istream& in, Topping& topping);
 

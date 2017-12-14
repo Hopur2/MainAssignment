@@ -59,6 +59,7 @@ void PizzaRespository::FilterMenu(string line)
     NewMenuTopping ord(Converttoint(order[0]), order[1], topping, Converttoint(order[3]));
 
     menu.push_back(ord);
+
 }
 
 vector<NewMenuTopping> PizzaRespository::PassMenu()
@@ -301,7 +302,30 @@ void PizzaRespository::GetLocation()
     while (!fin.is_open());
     fin.close();
   }
-
+string PizzaRespository::FindInFile(string input)
+{
+    string line;
+    ifstream fin;
+    fin.open("menu.txt");
+    if(fin.is_open())
+    {
+        while(getline(fin,line))
+        {
+            if(line.find(input + "|") !=string::npos)
+            {
+               // cout << line << endl;
+               return line;
+            }
+        }
+        fin.close();
+    }
+    else
+    {
+       // cout << "File Couldn't be opened" << endl;
+        return "File Couldn't be opened";
+    }
+    return 0;
+}
 
 
 

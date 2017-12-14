@@ -1,0 +1,38 @@
+
+1|1|Lowway Street 12|L||Keep Hawt|2000|Preparation|n|
+1|1|Lowway Street 12|L||Keep Hawt|2000|Preparation|n|
+2|1|Highway Street 11|L||no|2000|Preparation|y|
+3|1|Highway Street 11|L|ham,mushroom|I LIKE GOOD PZZIIA|2000|Preparation|y|
+3|1|Highway Street 11|m|ham,mushroom,ham,pepperoni|I LIKE GOOD PZZIIA|2000|Preparation|y|
+12|0|Haskoli Reykjavik|L|ham,pepperoni|more hot pockets|2000|Preparation|n|
+12|0|Haskoli Reykjavik|M|ham,pepperoni,ham|more hot pockets|2000|Preparation|n|
+7|0|_arna|L|ham,pepperoni|eg by ekki _arna|2400|Preparation|n|
+7|0|_arna|M|ham,pepperoni,ham,mushroom|eg by ekki _arna|2500|Preparation|n|
+7|0|_arna|S|ham,pepperoni,ham,mushroom,pepperoni,mushroom|eg by ekki _arna|2700|Preparation|n|
+0|0|R¢sarimi 4|l|ham,pepperoni,mushroom,|HOT BABY|
+1|1|Lowway Street 12|77|ham,|2 + 2 = 3?|
+2|1|Highway Street 11|L|ham,pepperoni,|lololol|
+1|0|Somewhere in Reykjavik|S|ham,pepperoni|Find ME|
+3|1|Middleway Street 13|l|ham,mushroom|no|4400|
+3|1|Highway Street 11|m|ham,pepperoni|plead the fifth|2100|
+32|1|Lowway Street 12|l|ham,mushroom|Spicy boiiiis|2400|Preparation|n|
+219|l|ham,pepperoni,|Viktor   etta|
+69|l|ham,pepperoni,mushroom,|Hafa Juicy bois|
+25|m|pepperoni,mushroom,|PS2|
+68|l|ham,pepperoni,mushroom,|Konan er picky|
+1|0|abc|L|ham,pepperoni,mushroom|abc|2600|Preparation|n|
+500|0|abc|l|ham,pepperoni,mushroom|abc|2600|Preparation|n|
+12|1|Middleway Street 13|L|pepperoni,mushroom|Hafa Juicy Bois|2400|Preparation|n|
+23|0|HR|l|ham,pepperoni,mushroom|Juicy|2600|Preparation|y|
+47|0|HR|m|ham,pepperoni,mushroom|Hafa Juicy|2300|Preparation|n|
+6604068|1|1|L|ham|I Like It HAWT|2200|Preparation|y|
+6604068|1|1|M|ham,ham,pepperoni,mushroom|I Like It HAWT|2500|Preparation|y|
+1234567|1|1|L|ham,pepperoni|Rawr|2400|Preparation|y|
+1234567|1|1|L|pepperoni,mushroom|Rawr|2400|Preparation|y|
+6604068|1|1|L|ham,pepperoni|Gimme Hot PIZZA|2400|Preparation|y|
+6604068|1|1|L|mushroom,pepperoni|Gimme Hot PIZZA|2400|Preparation|y|
+7654321|0|Your Moms|L|ham,mushroom|Hello|2400|Preparation|n|
+7654321|0|Your Moms|L|mushroom,pepperoni|Hello|2400|Preparation|n|
+5674321|1|1|M|ham,mushroom|no|2100|Preparation|y|
+6933399|1|2|l|ham,pepperoni,mushroom|Nice Place Bro|2600|Preparation|y|
+6933399|1|2|m|ham,pepperoni,mushroom|Nice Place Bro|2300|Preparation|y|
