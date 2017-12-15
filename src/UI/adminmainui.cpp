@@ -199,12 +199,24 @@ void adminmainUI::NewSides()
 void adminmainUI::readTopp()
 {
     cout << "================== Toppings ========================" << endl;
-    services.retrieveTopping();
+   pizza_repo.ReadTopping();
+    toppingMenu = pizza_repo.PassTopping();
+    for(unsigned int i = 0; i < toppingMenu.size(); i++)
+    {
+        cout << toppingMenu[i];
+    }
 }
 void adminmainUI::readMenu()
 {
     cout << "===================== Menu =========================" << endl;
-    services.retrievePizza();
+
+     pizza_repo.ReadMenu();
+    menu = pizza_repo.PassMenu();
+    for(unsigned int i = 0; i < menu.size(); i++)
+    {
+        cout << menu[i];
+    }
+    //services.retrievePizza();
 }
 
 

@@ -27,6 +27,8 @@ class adminmainUI
         AdminServices services;
         NewMenuTopping add;
         NewMenuTopping newmenutopping;
+        PizzaRespository pizza_repo;
+        vector<Topping> toppingMenu;
 };
 
 #endif // PIZZAUI_H
