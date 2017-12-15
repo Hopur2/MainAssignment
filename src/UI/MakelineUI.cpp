@@ -74,7 +74,7 @@ void MakelineUI::PrintOrders()
 
 void MakelineUI::DoneOrders(string input)
 {
-    if((int)input[0] > 10)
+    if(!isdigit(input[0]))
     {
         throw(input);
     }
@@ -84,7 +84,7 @@ void MakelineUI::DoneOrders(string input)
     ss >> out;
     try
     {
-        if(out > orders.size())
+        if(out >= orders.size())
         {
             throw(input);
         }
