@@ -1,0 +1,10 @@
+#ifndef INVALIDPAIDEXCEPTION_H
+#define INVALIDPAIDEXCEPTION_H
+
+
+class InvalidPaidException
+{
+
+};
+
+#endif // INVALIDPAIDEXCEPTION_H

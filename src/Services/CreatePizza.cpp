@@ -19,7 +19,11 @@ CreatePizza::CreatePizza()
 
 void CreatePizza::AddPizzaToOrder(const CreateOrder& order1)
 {
-    repo.StorePizza(order1);
+    if(IsValidSize(order1) && IsValidPayment(order1) && IsValidPhoneNumber(order1))
+    {
+        repo.StorePizza(order1);
+    }
+
 }
 
 void CreatePizza::ReadMenu()
@@ -106,7 +110,39 @@ int CreatePizza::GetOrderPrice(string id)
 
 }
 
+bool CreatePizza::IsValidPhoneNumber(const CreateOrder& order)
+{
+    string id = order.GetId();
+    int size = id.length();
+    for(unsigned int i = 0; i < id.length(); i++)
+    {
+        if((size != 7) || (!isdigit(id[i])))
+        {
+            throw (InvalidOrderIdException());
+        }
+    }
+    return true;
+}
 
+bool CreatePizza::IsValidSize(const CreateOrder& order)
+{
+    char pizzaSize = order.GetSize();
+    if((pizzaSize != 'M') && (pizzaSize != 'm') && (pizzaSize != 'L') && (pizzaSize != 'l') && (pizzaSize != 'S') && (pizzaSize != 's'))
+    {
+        throw(InvalidPizzaSizeException());
+    }
+    return true;
+}
+
+bool CreatePizza::IsValidPayment(const CreateOrder& order)
+{
+    char paid = order.GetPaid();
+    if(paid != 'y' && paid != 'n')
+    {
+        throw(InvalidPaidException());
+    }
+    return true;
+}
 
 int CreatePizza::ConvertToInt(string input)
 {
