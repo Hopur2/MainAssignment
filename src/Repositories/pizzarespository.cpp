@@ -24,10 +24,6 @@ void PizzaRespository::ReadLocation()
                 FilterMenu(str);
             }
         }
-        else
-        {
-            cout << "File note open" << endl;
-        }
     fin.close();
 }
 void PizzaRespository::FilterLocation(string line)
@@ -67,10 +63,6 @@ void PizzaRespository::ReadMenu()
                 getline(fin,str);
                 FilterMenu(str);
             }
-        }
-        else
-        {
-            cout << "File note open" << endl;
         }
     fin.close();
 }
@@ -121,10 +113,6 @@ void PizzaRespository::ReadTopping()
                 FilterTopping(str);
             }
         }
-        else
-        {
-            cout << "File note open" << endl;
-        }
     fin.close();
 }
 void PizzaRespository::FilterTopping(string line)
@@ -162,10 +150,6 @@ void PizzaRespository::ReadSides()
                 getline(fin,str);
                 FilterTopping(str);
             }
-        }
-        else
-        {
-            cout << "File note open" << endl;
         }
     fin.close();
 }
@@ -221,12 +205,7 @@ void PizzaRespository::retrieveTopping()
             while(!fin.eof())
             {
                 getline(fin,str);
-                cout << str << endl;
             }
-        }
-        else
-        {
-            cout << "File note open" << endl;
         }
     }
     while (!fin.is_open());
@@ -252,12 +231,7 @@ void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
             while(!fin.eof())
             {
                 getline(fin,str);
-                cout << str << endl;
             }
-        }
-        else
-        {
-            cout << "File note open" << endl;
         }
     }
     while (!fin.is_open());
@@ -275,12 +249,7 @@ void PizzaRespository::GetLocation()
             while(!fin.eof())
             {
                 getline(fin,str);
-                cout << str << endl;
             }
-        }
-        else
-        {
-            cout << "File note open" << endl;
         }
     }
     while (!fin.is_open());
@@ -297,7 +266,6 @@ string PizzaRespository::FindInFile(string input)
         {
             if(line.find(input + "|") !=string::npos)
             {
-               // cout << line << endl;
                return line;
             }
         }
@@ -305,7 +273,6 @@ string PizzaRespository::FindInFile(string input)
     }
     else
     {
-       // cout << "File Couldn't be opened" << endl;
         return "File Couldn't be opened";
     }
     return 0;
