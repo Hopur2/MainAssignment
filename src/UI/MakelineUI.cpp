@@ -48,7 +48,7 @@ void MakelineUI::MainMenu()
             }
             catch(string e)
             {
-                cout << e << endl;
+                cout << e << " is invalid input" << endl;
             }
         }
     }
@@ -74,6 +74,10 @@ void MakelineUI::PrintOrders()
 
 void MakelineUI::DoneOrders(string input)
 {
+    if((int)input[0] > 10)
+    {
+        throw(input);
+    }
     unsigned int out = 0;
     stringstream ss;
     ss << input;
@@ -82,7 +86,7 @@ void MakelineUI::DoneOrders(string input)
     {
         if(out > orders.size())
         {
-            throw(out);
+            throw(input);
         }
         MS.DoneOrder(orders[out]);
     }
