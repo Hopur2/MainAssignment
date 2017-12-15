@@ -1,4 +1,4 @@
 1|Meat&Cheese|pepp,io,jo,ei,ip|3500|
 2|Meatus|pepp,io,jo,ei,ip|3200|
 5|Mushroni|mushroom,epperoni|3500|
-4|Viktorinn|am|0|
+1|1|1|1|

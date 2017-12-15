@@ -32,5 +32,8 @@ void AdminServices::storeNewlocation(const Newlocation& location)
 {
     repo.storeNewlocation(location);
 }
-
+void AdminServices::DeleteFromMenu(string line2)
+{
+    repo.DeleteFromMenu(line2);
+}
 

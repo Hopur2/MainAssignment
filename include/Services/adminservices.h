@@ -14,6 +14,7 @@ class AdminServices
         void storeNewlocation(const Newlocation& location);
         void retrieveTopping();
         void retrievePizza();
+        void DeleteFromMenu(string line2);
 
     protected:
     private:

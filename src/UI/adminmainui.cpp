@@ -142,22 +142,7 @@ void adminmainUI::DeleteMenu()
     PizzaRespository repo;
     cout << repo.FindInFile(deleteline) << endl;
     string line2 = repo.FindInFile(deleteline);
-    string line;
-    ifstream fin;
-    fin.open("menu.txt");
-    ofstream temp;
-    temp.open("tempmenu.txt");
-    while (getline(fin,line))
-    {
-        if (line != line2)
-        {
-            temp << line << endl;
-        }
-    }
-    temp.close();
-    fin.close();
-    remove("menu.txt");
-    rename("tempmenu.txt","menu.txt");
+    services.DeleteFromMenu(line2);
 }
 void adminmainUI::CreateTopping()
 {

@@ -20,6 +20,7 @@ class PizzaRespository
     public:
         PizzaRespository();
         virtual ~PizzaRespository();
+        void DeleteFromMenu(string string2);
         void storeTopping(const Topping& pizza);
         void storeNewSides(const Topping& topping);
         void storeNewlocation(const Newlocation& location);

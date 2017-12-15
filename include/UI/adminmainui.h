@@ -19,6 +19,7 @@ class adminmainUI
         void NewSides();
         void FailCheck(int check);
         void IsValid(const NewMenuTopping& newmenutopping);
+        void DeleteFromMenu(string line2);
     protected:
     private:
         int admno;

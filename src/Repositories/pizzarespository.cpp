@@ -9,7 +9,25 @@ PizzaRespository::~PizzaRespository()
     //dtor
 }
 
-
+void PizzaRespository::DeleteFromMenu(string line2)
+{
+    string line;
+    ifstream fin;
+    fin.open("menu.txt");
+    ofstream temp;
+    temp.open("tempmenu.txt");
+    while (getline(fin,line))
+    {
+        if (line != line2)
+        {
+            temp << line << endl;
+        }
+    }
+    temp.close();
+    fin.close();
+    remove("menu.txt");
+    rename("tempmenu.txt","menu.txt");
+}
 void PizzaRespository::ReadLocation()
 {
     string str;
