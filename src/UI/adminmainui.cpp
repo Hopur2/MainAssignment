@@ -79,6 +79,7 @@ void adminmainUI::NewLocat()
         cout << "=================== New Location ===================" << endl;
         cout << "How many new locations: ";
         cin >> topCnt;
+         FailCheck(topCnt);
         int id;
         string name;
         string place;
@@ -113,8 +114,10 @@ void adminmainUI::CreateMenu()
         cin >> name;
         cout << "how many toppings: ";
         cin >> topCnt;
+         FailCheck(topCnt);
         cout << "Price: ";
         cin >> price;
+        FailCheck(price);
     for(int i = 0; i < topCnt; i++)
     {
         cout << "Topping " << i + 1 << ": ";
@@ -158,6 +161,7 @@ void adminmainUI::CreateTopping()
     cout << "===================== New Topping ==================" << endl;
     cout << "How many toppings: ";
     cin >> topCnt;
+     FailCheck(topCnt);
     int id;
     string name;
     int price;
@@ -170,6 +174,7 @@ void adminmainUI::CreateTopping()
         cin >> name;
         cout << "Price: ";
         cin >> price;
+        FailCheck(price);
         Topping topping(id,name,price);
         services.storeTopping(topping);
     }
@@ -181,6 +186,7 @@ void adminmainUI::NewSides()
     cout << "==================== New Sides =====================" << endl;
     cout << "How many new sides: ";
     cin >> topCnt;
+    FailCheck(topCnt);
     int id;
     string name;
     int price;
@@ -193,6 +199,7 @@ void adminmainUI::NewSides()
         cin >> name;
         cout << "Price: ";
         cin >> price;
+        FailCheck(price);
         Topping sides(id,name,price);
         services.storeNewSides(sides);
     }

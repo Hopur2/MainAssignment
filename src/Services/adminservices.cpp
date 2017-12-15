@@ -32,3 +32,5 @@ void AdminServices::storeNewlocation(const Newlocation& location)
 {
     repo.storeNewlocation(location);
 }
+
+
