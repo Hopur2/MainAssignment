@@ -96,20 +96,6 @@ int CreatePizza::GetMenuPrice(int id,char Size)
     return price;
 }
 
-int CreatePizza::GetOrderPrice(string id)
-{
-    int total_price = 0;
-    for(unsigned int i = 0; i < orders.size(); i++)
-    {
-        if(orders[i].GetId() == id)
-        {
-            total_price += orders[i].GetPrice();
-        }
-    }
-    return total_price;
-
-}
-
 bool CreatePizza::IsValidPhoneNumber(const CreateOrder& order)
 {
     string id = order.GetId();

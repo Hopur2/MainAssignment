@@ -14,7 +14,6 @@ class CreatePizza
     public:
 
         CreatePizza();
-        int GetOrderPrice(string id);
         void AddPizzaToOrder(const CreateOrder& order1);
         string GetToppings(int id);
         int GetToppingPrice(int id);

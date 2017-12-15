@@ -9,8 +9,7 @@ void Sales::salesUI()
 {
     cout << "============== Welcome Sales persons ==============" << endl;
     cout << "[1]. make order" << endl;
-    cout << "[2]. read Order" << endl;
-    cout << "[3]. Go To Main Menu" << endl;
+    cout << "[2]. Go To Main Menu" << endl;
     cout << "===================================================" << endl;
     char choice;
     cin >> choice;
@@ -21,10 +20,6 @@ void Sales::salesUI()
             salesUI();
             break;
         case '2':
-            //read_order();
-            salesUI();
-            break;
-        case '3':
             Menu();
             break;
         default:
@@ -120,9 +115,9 @@ void Sales::CreatePizzaOrder()
         }
         else
         {
-            addTopping(toppings,price);
+            AddTopping(toppings,price);
 
-            price += getprice(pizzaSize);
+            price += GetPrice(pizzaSize);
         }
 
         CreateOrder pizza(id,delivery,place,pizzaSize,toppings,comments,price,status,paid);
@@ -140,7 +135,7 @@ void Sales::CreatePizzaOrder()
     cout << "================== Create Order ===================" <<endl;
 }
 
-void Sales::addTopping(vector<string>& toppings,int& price)
+void Sales::AddTopping(vector<string>& toppings,int& price)
 {
     order_service.ReadToppings();
     int id;
@@ -180,7 +175,7 @@ void Sales::GetFromMenu(vector<string>& toppings, int& price,char Size)
     price = order_service.GetMenuPrice(input,Size);
 }
 
-int Sales::getprice(char pizzaSize)
+int Sales::GetPrice(char pizzaSize)
 {
     int price = 0;
     if(pizzaSize == 'l' || pizzaSize == 'L')
