@@ -89,9 +89,11 @@ void adminmainUI::NewLocat()
             cin >> id;
             FailCheck(id);
             cout << "Name: ";
-            cin >> name;
+            cin.ignore();
+            getline(cin,name);
             cout << "Place: ";
-            cin >> place;
+            cin.ignore();
+            getline(cin,place);
             Newlocation location(id,name,place);
             services.storeNewlocation(location);
         }
@@ -111,7 +113,8 @@ void adminmainUI::CreateMenu()
         cin >> id;
         FailCheck(id);
         cout << "Name: ";
-        cin >> name;
+        cin.ignore();
+        getline(cin,name);
         cout << "how many toppings: ";
         cin >> topCnt;
          FailCheck(topCnt);
@@ -121,7 +124,8 @@ void adminmainUI::CreateMenu()
     for(int i = 0; i < topCnt; i++)
     {
         cout << "Topping " << i + 1 << ": ";
-        cin >> input;
+        cin.ignore();
+        getline(cin,input);
         topping.push_back(input);
     }
     NewMenuTopping menupizza(id, name, topping, price);
@@ -171,7 +175,8 @@ void adminmainUI::CreateTopping()
         cin >> id;
         FailCheck(id);
         cout << "Name: ";
-        cin >> name;
+        cin.ignore();
+        getline(cin,name);
         cout << "Price: ";
         cin >> price;
         FailCheck(price);
@@ -196,7 +201,8 @@ void adminmainUI::NewSides()
         cin >> id;
         FailCheck(id);
         cout << "Name: ";
-        cin >> name;
+        cin.ignore();
+        getline(cin,name);
         cout << "Price: ";
         cin >> price;
         FailCheck(price);
