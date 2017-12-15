@@ -8,8 +8,6 @@ using namespace std;
 #include "Services/adminservices.h"
 #include "UI/Menu.h"
 
-
-
 adminmainUI::adminmainUI()
 {
     //ctor
@@ -33,55 +31,54 @@ char choice;
     switch(choice)
     {
         case '1':
-            create_menu();
+            CreateMenu();
             startUI();
             break;
         case '2':
-            create_topping();
+            CreateTopping();
             startUI();
             break;
         case '3':
             readTopp();
             startUI();
             break;
-            case '4':
-             readMenu();
+        case '4':
+            readMenu();
             startUI();
             break;
-            case '5':
-             delete_menu();
+        case '5':
+            DeleteMenu();
             startUI();
             break;
-            case '6':
-           New_location();
-           startUI();
+        case '6':
+            NewLocat();
+            startUI();
             break;
-            case '7':
-           New_Stuff();
-           startUI();
+        case '7':
+            NewSides();
+            startUI();
             break;
-            case '8':
-           Menu();
+        case '8':
+            Menu();
             break;
         default:
             cout << "Invaild input. try again" << endl;
-
             break;
     }
 }
 
 
-void adminmainUI::New_location()
+void adminmainUI::IsValid(const NewMenuTopping& newmenutopping)
 {
 
+}
 
+void adminmainUI::NewLocat()
+{
         int topCnt;
-
         cout << "=================== New Location ===================" << endl;
         cout << "How many new locations: ";
         cin >> topCnt;
-
-
         int id;
         string name;
         string place;
@@ -89,25 +86,18 @@ void adminmainUI::New_location()
         {
             cout << "Id: ";
             cin >> id;
+            FailCheck(id);
             cout << "Name: ";
             cin >> name;
             cout << "Place: ";
             cin >> place;
             Newlocation location(id,name,place);
-
             services.storeNewlocation(location);
         }
         cout << endl;
-
-
-
-
-
-
-
 }
 
-void adminmainUI::create_menu()
+void adminmainUI::CreateMenu()
 {
         int id;
         int topCnt;
@@ -115,116 +105,98 @@ void adminmainUI::create_menu()
         int price;
         string input;
         vector<string> topping;
-
         cout << "===================== New Pizza ====================" << endl;
         cout << "Id: ";
         cin >> id;
+        FailCheck(id);
         cout << "Name: ";
         cin >> name;
-
         cout << "how many toppings: ";
         cin >> topCnt;
-
         cout << "Price: ";
         cin >> price;
-
-
-
     for(int i = 0; i < topCnt; i++)
     {
         cout << "Topping " << i + 1 << ": ";
         cin >> input;
         topping.push_back(input);
-
     }
- NewMenuTopping menupizza(id, name, topping, price);
+    NewMenuTopping menupizza(id, name, topping, price);
     cout << menupizza;
-
-        services.AddMenu(menupizza);
-
-cout << endl;
+    services.AddMenu(menupizza);
+    cout << endl;
 }
-
-void adminmainUI::delete_menu()
+void adminmainUI::DeleteMenu()
 {
     string deleteline;
-
     cout << "=================== Delete Pizza ===================" << endl;
     cout << "Id: ";
     cin >> deleteline;
     PizzaRespository repo;
     cout << repo.FindInFile(deleteline) << endl;
     string line2 = repo.FindInFile(deleteline);
-
-                string line;
-
-                ifstream fin;
-                fin.open("menu.txt");
-                ofstream temp;
-                temp.open("tempmenu.txt");
-             //   cout << "Type in pizza you want to remove: ";
-             //   cin >> deleteline;
-
-               while (getline(fin,line))
-{
-
-    if (line != line2)
+    string line;
+    ifstream fin;
+    fin.open("menu.txt");
+    ofstream temp;
+    temp.open("tempmenu.txt");
+    while (getline(fin,line))
     {
-    temp << line << endl;
+        if (line != line2)
+        {
+            temp << line << endl;
+        }
     }
+    temp.close();
+    fin.close();
+    remove("menu.txt");
+    rename("tempmenu.txt","menu.txt");
 }
-                temp.close();
-                fin.close();
-                remove("menu.txt");
-                rename("tempmenu.txt","menu.txt");
-}
-void adminmainUI::create_topping()
+void adminmainUI::CreateTopping()
 {
-     int topCnt;
-
-       cout << "===================== New Topping ==================" << endl;
-        cout << "How many toppings: ";
-        cin >> topCnt;
-        int id;
-        string name;
-        int price;
-        for(int i = 0; i < topCnt; i++)
-        {
-            cout << "Id: ";
-            cin >> id;
-            cout << "Name: ";
-            cin >> name;
-            cout << "Price: ";
-            cin >> price;
-            Topping topping(id,name,price);
-
-            services.storeTopping(topping);
-        }
-        cout << endl;
+    int topCnt;
+    cout << "===================== New Topping ==================" << endl;
+    cout << "How many toppings: ";
+    cin >> topCnt;
+    int id;
+    string name;
+    int price;
+    for(int i = 0; i < topCnt; i++)
+    {
+        cout << "Id: ";
+        cin >> id;
+        FailCheck(id);
+        cout << "Name: ";
+        cin >> name;
+        cout << "Price: ";
+        cin >> price;
+        Topping topping(id,name,price);
+        services.storeTopping(topping);
+    }
+    cout << endl;
 }
-void adminmainUI::New_Stuff()
+void adminmainUI::NewSides()
 {
-     int topCnt;
-
-     cout << "==================== New Sides =====================" << endl;
-        cout << "How many new sides: ";
-        cin >> topCnt;
-        int id;
-        string name;
-        int price;
-        for(int i = 0; i < topCnt; i++)
-        {
-            cout << "Id: ";
-            cin >> id;
-            cout << "Name: ";
-            cin >> name;
-            cout << "Price: ";
-            cin >> price;
-            Topping sides(id,name,price);
-
-            services.storeNewSides(sides);
-        }
-        cout << endl;
+    int topCnt;
+    cout << "==================== New Sides =====================" << endl;
+    cout << "How many new sides: ";
+    cin >> topCnt;
+    int id;
+    string name;
+    int price;
+    for(int i = 0; i < topCnt; i++)
+    {
+        cout << "Id: ";
+        cin >> id;
+        FailCheck(id);
+        cout << "Name: ";
+        cin >> name;
+        cout << "Price: ";
+        cin >> price;
+        Topping sides(id,name,price);
+        services.storeNewSides(sides);
+    }
+    cout << endl;
 }
 void adminmainUI::readTopp()
 {
@@ -238,5 +210,13 @@ void adminmainUI::readMenu()
 }
 
 
-
+void adminmainUI::FailCheck(int check)
+{
+    if(cin.fail())
+    {
+        cin.clear();
+        cin.ignore(256,'\n');
+        check = 0;
+    }
+}
 

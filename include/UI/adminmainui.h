@@ -1,7 +1,7 @@
-#ifndef PIZZAUI_H
-#define PIZZAUI_H
+#ifndef ADMINMAINUI_H
+#define ADMINMAINUI_H
 
-#include <vector>
+
 #include "Models/newmenutopping.h"
 #include "Services/adminservices.h"
 
@@ -9,25 +9,23 @@ class adminmainUI
 {
     public:
         adminmainUI();
-        void create_menu();
-        void create_topping();
+        void CreateMenu();
+        void CreateTopping();
         void readTopp();
         void readMenu();
         void startUI();
-        void delete_menu();
-        void New_location();
-        void New_Stuff();
+        void DeleteMenu();
+        void NewLocat();
+        void NewSides();
+        void FailCheck(int check);
+        void IsValid(const NewMenuTopping& newmenutopping);
     protected:
     private:
         int admno;
         vector<NewMenuTopping> menu;
         AdminServices services;
+        NewMenuTopping add;
         NewMenuTopping newmenutopping;
-
-
-
-        //PizzaRespository repo;
-
 };
 
 #endif // PIZZAUI_H

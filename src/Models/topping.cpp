@@ -1,5 +1,3 @@
-#include <string.h>
-#include "Models/pizza.h"
 #include "Models/newstuff.h"
 Topping::Topping()
 {
@@ -27,10 +25,7 @@ istream& operator >>(istream& in, Topping& topping)
 }
 ostream& operator <<(ostream& out, const Topping& topping)
 {
-
     out << topping._id << "|" << topping._name << "|" << topping._price << "|" << endl;
-
-
     return out;
 }
 int Topping::getID()

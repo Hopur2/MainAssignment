@@ -7,19 +7,13 @@ using namespace std;
 class Newlocation
 {
         public:
-    Newlocation();
+        Newlocation();
         Newlocation(int id, string name, string place);
-
-
-
         int getID();
         int getPrice();
         string getName();
-
         friend istream& operator >>(istream& in, Newlocation& location);
-
         friend ostream& operator <<(ostream& out, const Newlocation& location);
-
     protected:
     private:
         int _id;

@@ -1,11 +1,7 @@
 #ifndef NEWMENUTOPPING_H
 #define NEWMENUTOPPING_H
 #include <fstream>
-
-
-
 #include <vector>
-
 
 using namespace std;
 class NewMenuTopping

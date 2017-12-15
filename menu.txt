@@ -2,7 +2,6 @@
 1|1|1|1|
 1|1|1|1|
 =======
-22|Nafn4|toping1,topping2,topping3,topping4|400|
 21.|Nafn5|toping1,topping2,topping3,topping4|500|
 100|Pizzanafn|pepp,hakk,beikon|1590|
 3|Nafn3|toping1,topping2,topping3,topping4|300|
@@ -13,3 +12,8 @@
 50|Meat&Cheese|pepperoni,cheddarCheese,bacon|3490|
 >>>>>>> 603521f82891a58ae61a3fca6a412ba2165e2b5f
 1|1|1|1|
+1|1|1|1|
+0|1|1|1|
+0|1||8125104|
+1|1|1|1|
+2|2|2,2|22|

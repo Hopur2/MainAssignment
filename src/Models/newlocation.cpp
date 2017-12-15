@@ -26,9 +26,6 @@ istream& operator >>(istream& in, Newlocation& location)
 }
 ostream& operator <<(ostream& out, const Newlocation& location)
 {
-
     out << location._id << "|" << location._name << "|" << location._place << "|" << endl;
-
-
     return out;
 }

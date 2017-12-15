@@ -1,8 +1,6 @@
 #ifndef NEWSTUFF_H
 #define NEWSTUFF_H
-#include <fstream>
 #include "topping.h"
-
 
 class NewStuff
 {

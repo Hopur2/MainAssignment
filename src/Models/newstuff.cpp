@@ -9,7 +9,6 @@ NewStuff::NewStuff()
 }
 NewStuff::NewStuff(int numberOfStuff)
 {
-
     stuffCount = numberOfStuff;
     toppings = new Topping[stuffCount];
     currentstuffNum = 0;
@@ -17,14 +16,13 @@ NewStuff::NewStuff(int numberOfStuff)
 NewStuff::~NewStuff()
 {
     clean();
-
 }
 void NewStuff::initialize(int numberOfStuff)
 {
     clean();
     stuffCount = numberOfStuff;
     toppings = new Topping[stuffCount];
-     currentstuffNum = 0;
+    currentstuffNum = 0;
 }
 void NewStuff::addTopping(Topping topping)
 {

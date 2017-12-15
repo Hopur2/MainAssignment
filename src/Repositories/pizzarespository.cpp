@@ -1,10 +1,4 @@
-#include <fstream>
-
-using namespace std;
-
 #include "Repositories/pizzarespository.h"
-
-
 PizzaRespository::PizzaRespository()
 {
     //ctor
@@ -36,12 +30,9 @@ void PizzaRespository::ReadLocation()
         }
     fin.close();
 }
-
 void PizzaRespository::FilterLocation(string line)
 {
     string order[3];
-
-
     int counter = 0;
     for(unsigned int i = 0; i < line.size(); i++)
     {
@@ -54,10 +45,7 @@ void PizzaRespository::FilterLocation(string line)
             order[counter] += line[i];
         }
     }
-
-    //Topping ord(toppings, order[1][0], Converttoint(order[2]), Converttoint(order[3]), Converttoint(order[4]));
     Newlocation ord(Converttoint(order[0]), order[1], order[3]);
-
     location.push_back(ord);
 
 }
@@ -66,11 +54,6 @@ vector<Newlocation> PizzaRespository::PassLocation()
 {
     return location;
 }
-
-
-
-
-
 void PizzaRespository::ReadMenu()
 {
     string str;
@@ -91,12 +74,10 @@ void PizzaRespository::ReadMenu()
         }
     fin.close();
 }
-
 void PizzaRespository::FilterMenu(string line)
 {
     string order[4];
     vector<string> topping;
-
     int counter = 0;
     for(unsigned int i = 0; i < line.size(); i++)
     {
@@ -112,23 +93,18 @@ void PizzaRespository::FilterMenu(string line)
     topping.push_back(order[2]);
     NewMenuTopping ord(Converttoint(order[0]), order[1], topping, Converttoint(order[3]));
     menu.push_back(ord);
-
 }
-
 vector<NewMenuTopping> PizzaRespository::PassMenu()
 {
     return menu;
 }
-
 int PizzaRespository::Converttoint(string input)
 {
     stringstream ss;
     int out = 0;
     ss << input;
     ss >> out;
-
     return out;
-
 }
 
 void PizzaRespository::ReadTopping()
@@ -151,13 +127,9 @@ void PizzaRespository::ReadTopping()
         }
     fin.close();
 }
-
-
 void PizzaRespository::FilterTopping(string line)
 {
     string order[3];
-
-
     int counter = 0;
     for(unsigned int i = 0; i < line.size(); i++)
     {
@@ -170,19 +142,13 @@ void PizzaRespository::FilterTopping(string line)
             order[counter] += line[i];
         }
     }
-
-
     Topping ord(Converttoint(order[0]), order[1], Converttoint(order[2]));
-
     toppings.push_back(ord);
 }
-
 vector<Topping> PizzaRespository::PassTopping()
 {
     return toppings;
 }
-
-
 void PizzaRespository::ReadSides()
 {
     string str;
@@ -203,13 +169,9 @@ void PizzaRespository::ReadSides()
         }
     fin.close();
 }
-
-
 void PizzaRespository::FilterSides(string line)
 {
     string order[3];
-
-
     int counter = 0;
     for(unsigned int i = 0; i < line.size(); i++)
     {
@@ -222,49 +184,36 @@ void PizzaRespository::FilterSides(string line)
             order[counter] += line[i];
         }
     }
-
-
     Topping ord(Converttoint(order[0]), order[1], Converttoint(order[2]));
-
     toppings.push_back(ord);
 }
 
 void PizzaRespository::storeNewlocation(const Newlocation& location)
 {
     ofstream fout;
-
     fout.open("location.txt", ios::app);
-
     fout << location;
-
     fout.close();
 }
 void PizzaRespository::storeNewSides(const Topping& sides)
 {
     ofstream fout;
-
     fout.open("sides.txt", ios::app);
-
     fout << sides;
-
     fout.close();
 }
 void PizzaRespository::storeTopping(const Topping& pizza)
 {
     ofstream fout;
-
     fout.open("toppings.txt", ios::app);
-
     fout << pizza;
-
     fout.close();
 }
 void PizzaRespository::retrieveTopping()
 {
-   string str;
+    string str;
     ifstream fin;
     fin.open("toppings.txt");
-
     do
     {
         if(fin.is_open())
@@ -282,7 +231,6 @@ void PizzaRespository::retrieveTopping()
     }
     while (!fin.is_open());
     fin.close();
-
 }
 void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
  {
@@ -294,10 +242,9 @@ void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
 
   void PizzaRespository::retrievePizza()
   {
-      string str;
+    string str;
     ifstream fin;
     fin.open("menu.txt");
-
     do
     {
         if(fin.is_open())
@@ -315,16 +262,12 @@ void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
     }
     while (!fin.is_open());
     fin.close();
-  }
-
-
-
+}
 void PizzaRespository::GetLocation()
   {
-      string str;
+    string str;
     ifstream fin;
     fin.open("location.txt");
-
     do
     {
         if(fin.is_open())
@@ -367,9 +310,3 @@ string PizzaRespository::FindInFile(string input)
     }
     return 0;
 }
-
-
-
-
-
-

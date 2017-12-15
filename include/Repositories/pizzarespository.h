@@ -20,24 +20,18 @@ class PizzaRespository
     public:
         PizzaRespository();
         virtual ~PizzaRespository();
-
         void storeTopping(const Topping& pizza);
         void storeNewSides(const Topping& topping);
         void storeNewlocation(const Newlocation& location);
-
         void retrieveTopping();
         void retrievePizza();
         void GetLocation();
         void newMenu(const NewMenuTopping& newmenutopping);
-
-
         string FindInFile(string input);
         void ReadSides();
         void ReadLocation();
         void FilterLocation(string line);
         void FilterSides(string line);
-
-
         void ReadTopping();
         void FilterMenu(string line);
         void FilterTopping(string line);
@@ -48,10 +42,8 @@ class PizzaRespository
         vector<NewStuff> passSides();
         string Converttostring(int input);
         void ReadMenu();
-
     protected:
     private:
-
        vector<NewMenuTopping> menu;
        vector<Topping> toppings;
        vector<Newlocation> location;

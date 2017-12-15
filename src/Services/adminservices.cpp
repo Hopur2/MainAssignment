@@ -4,18 +4,14 @@ AdminServices::AdminServices()
 {
     //ctor
 }
-
 AdminServices::~AdminServices()
 {
     //dtor
 }
-
 void AdminServices::AddMenu(const NewMenuTopping& menu1)
 {
     repo.newMenu(menu1);
 }
-
-
 void AdminServices::storeTopping(const Topping& pizza)
 {
     repo.storeTopping(pizza);

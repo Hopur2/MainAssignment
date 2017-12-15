@@ -1,6 +1,5 @@
 #include "Models/newmenutopping.h"
-#include <fstream>
-#include <stddef.h>
+
 using namespace std;
 
 NewMenuTopping::NewMenuTopping()
@@ -13,11 +12,9 @@ NewMenuTopping::NewMenuTopping(int id,string name, vector<string> topping,int pr
     _id = id;
     _name = name;
     _price = price;
-
 }
 NewMenuTopping::~NewMenuTopping()
 {
-
 
 }
 
@@ -25,7 +22,6 @@ NewMenuTopping::~NewMenuTopping()
 ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
 {
     out << pizza._id << "|" << pizza._name << "|";
-
     for(unsigned int i = 0; i < pizza._topping.size();i++)
     {
         out << pizza._topping.at(i);
@@ -36,7 +32,6 @@ ostream& operator <<(ostream& out, const NewMenuTopping& pizza)
     }
     out << "|";
     out << pizza._price << "|" << endl;
-
     return out;
 }
 
