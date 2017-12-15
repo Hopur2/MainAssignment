@@ -74,12 +74,22 @@ void MakelineUI::PrintOrders()
 
 void MakelineUI::DoneOrders(string input)
 {
-    int out = 0;
+    unsigned int out = 0;
     stringstream ss;
     ss << input;
     ss >> out;
-
-    MS.DoneOrder(orders[out]);
+    try
+    {
+        if(out > orders.size())
+        {
+            throw(out);
+        }
+        MS.DoneOrder(orders[out]);
+    }
+    catch(int e)
+    {
+        cout << e << " is an invalid input" << endl;
+    }
 }
 
 void MakelineUI::PickStore()
