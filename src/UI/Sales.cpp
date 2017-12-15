@@ -17,11 +17,11 @@ void Sales::salesUI()
     switch(choice)
     {
         case '1':
-            create_pizza();
+            CreatePizzaOrder();
             salesUI();
             break;
         case '2':
-            read_order();
+            //read_order();
             salesUI();
             break;
         case '3':
@@ -34,7 +34,35 @@ void Sales::salesUI()
     }
 }
 
-void Sales::create_pizza()
+void Sales::ValidateUserInput(const CreateOrder& order1)
+{
+    try
+    {
+        order_service.AddPizzaToOrder(order1);
+    }
+    catch(InvalidPizzaSizeException)
+    {
+        cout << "!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!" << endl;
+        cout << "The size of the Pizza you put in is wrong" <<endl;
+        cout << "use L,M,S or l,m,s" <<endl;
+        cout << "!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!" << endl;
+    }
+        catch(InvalidPaidException)
+    {
+        cout << "!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!" << endl;
+        cout << "You have to choose 'y' or 'n' in pay now or during retrieval" <<endl;
+        cout << "!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!" << endl;
+    }
+    catch(InvalidOrderIdException)
+    {
+        cout << "!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!" << endl;
+        cout << "Phone number must be 7 digits and not a string" <<endl;
+        cout << "!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!" << endl;
+    }
+
+}
+
+void Sales::CreatePizzaOrder()
 {
     int total_price = 0;
     vector<string> toppings;
@@ -79,7 +107,7 @@ void Sales::create_pizza()
     {
         cout << "---------------------------------------------------" << endl;
         cout << "Order from menu press 'y'" <<endl;
-        cout << "Or pick your own toppings press 'n'" <<endl;
+        cout << "Or pick your own toppings press anything else" <<endl;
         cout << "Input: ";
         char OrderFromMenu;
         cin >> OrderFromMenu;
@@ -97,13 +125,16 @@ void Sales::create_pizza()
             price += getprice(pizzaSize);
         }
 
-        total_price += price;
         CreateOrder pizza(id,delivery,place,pizzaSize,toppings,comments,price,status,paid);
         cout << pizza << endl;
 
-        order_service.AddPizzaToOrder(pizza);
+        //order_service.AddPizzaToOrder(pizza);
+        ValidateUserInput(pizza);
         toppings.clear();
+        total_price += price;
+        price = 0;
     }
+
     cout << "---------------------------------------------------" << endl;
     cout << "Price of Order: " << total_price << endl;
     cout << "================== Create Order ===================" <<endl;
@@ -198,12 +229,3 @@ string Sales::Stores()
     return "";
 }
 
-void Sales::read_order()
-{
-    cout << "input phone number: ";
-    string input;
-    cin.ignore();
-    getline(cin,input);
-
-    order_service.GetOrderPrice(input);
-}

@@ -1,0 +1,10 @@
+#ifndef INVALIDPIZZASIZEEXCEPTION_H
+#define INVALIDPIZZASIZEEXCEPTION_H
+
+
+class InvalidPizzaSizeException
+{
+
+};
+
+#endif // INVALIDPIZZASIZEEXCEPTION_H

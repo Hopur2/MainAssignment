@@ -3,6 +3,11 @@
 //#include "CreateOrder.h"
 #include "Repositories/OrderRepository.h"
 #include "Repositories/pizzarespository.h"
+#include "Exceptions/InvalidPaidException.h"
+#include "Exceptions/InvalidPizzaSizeException.h"
+#include "Exceptions/InvalidOrderIdException.h"
+
+
 
 class CreatePizza
 {
@@ -18,9 +23,9 @@ class CreatePizza
         void ReadMenu();
         void ReadToppings();
         int ConvertToInt(string input);
-        bool IsValidPhoneNumber(int phoneNumber);
-        bool IsValidSize(char Size);
-        bool IsValidPayment(char answer);
+        bool IsValidPhoneNumber(const CreateOrder& order);
+        bool IsValidSize(const CreateOrder& order);
+        bool IsValidPayment(const CreateOrder& order);
 
     private:
         vector<CreateOrder> orders;

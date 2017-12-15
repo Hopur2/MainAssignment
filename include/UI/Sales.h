@@ -10,7 +10,8 @@ class Sales
     public:
         Sales();
         void salesUI();
-        void create_pizza();
+        void CreatePizzaOrder();
+        void ValidateUserInput(const CreateOrder& order1);
         void read_order();
         void addTopping(vector<string>& toppings,int& price);
         void GetFromMenu(vector<string>& toppings, int& price, char Size);

@@ -24,14 +24,29 @@ string CreateOrder::at(int i) const
    return _toppings[i];
 }
 
-int CreateOrder::GetPrice()
+int CreateOrder::GetPrice() const
 {
     return _price;
 }//
 
-string CreateOrder::GetId()
+string CreateOrder::GetId() const
 {
     return _ID;
+}
+
+char CreateOrder::GetPaid() const
+{
+    return _paid;
+}
+
+char CreateOrder::GetSize() const
+{
+    return _pizzaSize;
+}
+
+char CreateOrder::GetDelivery() const
+{
+    return _delivery;
 }
 
 ostream& operator <<(ostream& out, const CreateOrder& createOrder)

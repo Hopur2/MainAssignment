@@ -1,0 +1,9 @@
+#ifndef INVALIDORDERIDEXCEPTION_H
+#define INVALIDORDERIDEXCEPTION_H
+
+
+class InvalidOrderIdException
+{
+};
+
+#endif // INVALIDORDERIDEXCEPTION_H
