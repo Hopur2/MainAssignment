@@ -22,12 +22,9 @@ void MakelineFileWorker::ReadFile(string file)
             }
             FilterFile(line);
         }
+        fin.close();
     }
-    else
-    {
-        cout << "File could not be opened" << endl;
-    }
-    fin.close();
+
 
 }
 
@@ -68,10 +65,6 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
         }
         fout.close();
     }
-    else
-    {
-        cout << "File couldn't be opened" << endl;
-    }
     fout.open(file2.c_str(), ios::app);
     if(fout.is_open())
     {
@@ -82,10 +75,6 @@ void MakelineFileWorker::WriteOrders(string file1, string file2, vector<Order> O
             DoneOrders[i].SetVerbose(1);
         }
         fout.close();
-    }
-    else
-    {
-        cout << "File couldn't be opened" << endl;
     }
 }
 
