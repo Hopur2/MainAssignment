@@ -16,6 +16,7 @@ class Sales
         void addTopping(vector<string>& toppings,int& price);
         void GetFromMenu(vector<string>& toppings, int& price, char Size);
         int getprice(char pizzaSize);
+        void FailureCheck(int check);
         string Stores();
     private:
         CreatePizza order_service;

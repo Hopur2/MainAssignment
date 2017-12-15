@@ -101,7 +101,7 @@ void Sales::CreatePizzaOrder()
     cout << "---------------------------------------------------" << endl;
     cout << "how many pizzas: ";
     cin >> numberOfPizzas;
-
+    FailureCheck(numberOfPizzas);
 
     for(int i = 0; i < numberOfPizzas; i++)
     {
@@ -229,3 +229,10 @@ string Sales::Stores()
     return "";
 }
 
+void Sales::FailureCheck(int check){
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore(256,'\n');
+        check = 0;
+    }
+}
