@@ -7,10 +7,6 @@ CreatePizza::CreatePizza()
     pizza_repo.ReadMenu();
     menu = pizza_repo.PassMenu();
 
-
-    pizza_repo.ReadMenu();
-    menu = pizza_repo.PassMenu();
-
     pizza_repo.ReadTopping();
     toppingMenu = pizza_repo.PassTopping();
 

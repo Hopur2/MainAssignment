@@ -16,10 +16,16 @@ class Sales
         void GetFromMenu(vector<string>& toppings, int& price, char Size);
         int GetPrice(char pizzaSize);
         void FailureCheck(int check);
+        void PrintToppingMenu();
+        void PrintMenu();
         string Stores();
     private:
         CreatePizza order_service;
         OrderRepository order;
+        PizzaRespository pizza_repo;
+        vector<NewMenuTopping> menu;
+        vector<Topping> toppingMenu;
+
 };
 
 #endif // SALES_H

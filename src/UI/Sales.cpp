@@ -137,7 +137,8 @@ void Sales::CreatePizzaOrder()
 
 void Sales::AddTopping(vector<string>& toppings,int& price)
 {
-    order_service.ReadToppings();
+    PrintToppingMenu();
+
     int id;
     string input;
     bool leave = true;
@@ -167,7 +168,7 @@ void Sales::AddTopping(vector<string>& toppings,int& price)
 
 void Sales::GetFromMenu(vector<string>& toppings, int& price,char Size)
 {
-    order_service.ReadMenu();
+    PrintMenu();
     int input;
     cout << "enter number to to add pizza: ";
     cin >> input;
@@ -229,5 +230,26 @@ void Sales::FailureCheck(int check){
         cin.clear();
         cin.ignore(256,'\n');
         check = 0;
+    }
+}
+
+
+void Sales::PrintToppingMenu()
+{
+    pizza_repo.ReadTopping();
+    toppingMenu = pizza_repo.PassTopping();
+    for(unsigned int i = 0; i < toppingMenu.size(); i++)
+    {
+        cout << toppingMenu[i];
+    }
+}
+
+void Sales::PrintMenu()
+{
+    pizza_repo.ReadMenu();
+    menu = pizza_repo.PassMenu();
+    for(unsigned int i = 0; i < menu.size(); i++)
+    {
+        cout << menu[i];
     }
 }

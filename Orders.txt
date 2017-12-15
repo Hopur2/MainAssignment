@@ -17,3 +17,5 @@
 231|1|1|L|Meat&Cheese|no|3490|Preparation|y|
 213|1|1|L|Meat&Cheese|n|3490|Preparation|y|
 5812345|1|1|L|Meat&Cheese|hello|3490|Preparation|y|
+6604069|1|1|L|Meat&Cheese||3500|Preparation|y|
+1234567|1|1|l||j|3200|Preparation|y|
