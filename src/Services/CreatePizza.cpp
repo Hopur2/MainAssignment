@@ -7,10 +7,6 @@ CreatePizza::CreatePizza()
     pizza_repo.ReadMenu();
     menu = pizza_repo.PassMenu();
 
-
-    pizza_repo.ReadMenu();
-    menu = pizza_repo.PassMenu();
-
     pizza_repo.ReadTopping();
     toppingMenu = pizza_repo.PassTopping();
 
@@ -94,20 +90,6 @@ int CreatePizza::GetMenuPrice(int id,char Size)
         price = price * 0.7;
     }
     return price;
-}
-
-int CreatePizza::GetOrderPrice(string id)
-{
-    int total_price = 0;
-    for(unsigned int i = 0; i < orders.size(); i++)
-    {
-        if(orders[i].GetId() == id)
-        {
-            total_price += orders[i].GetPrice();
-        }
-    }
-    return total_price;
-
 }
 
 bool CreatePizza::IsValidPhoneNumber(const CreateOrder& order)

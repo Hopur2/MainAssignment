@@ -223,6 +223,7 @@ void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
   {
     string str;
     ifstream fin;
+    ofstream fout;
     fin.open("menu.txt");
     do
     {
@@ -231,6 +232,7 @@ void PizzaRespository::newMenu(const NewMenuTopping& newmenutopping)
             while(!fin.eof())
             {
                 getline(fin,str);
+                fout << str << endl;
             }
         }
     }
